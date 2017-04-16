@@ -1,14 +1,14 @@
 apply plugin: 'com.android.library'
 
 ext {
-    bintrayRepo = 'MockAppCore'
-    bintrayName = 'mockapp-core'
+    bintrayRepo = 'maven'
+    bintrayName = 'mockappcore'
 
-    publishedGroupId = 'com.crane.mockappcore'
-    libraryName = 'mockapp-core'
-    artifact = 'mockapp-core'
+    publishedGroupId = 'com.crane'
+    libraryName = 'mockappcore'
+    artifact = 'mockappcore'
 
-    libraryDescription = 'MockApp views inflater'
+    libraryDescription = 'MockApp views inflater library'
 
     siteUrl = 'https://github.com/alzhuravlev/MockAppDemo'
     gitUrl = 'https://github.com/alzhuravlev/MockAppDemo.git'
