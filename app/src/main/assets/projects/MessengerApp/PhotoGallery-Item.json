@@ -1,0 +1,22 @@
+{
+  "layout" : {
+    "children" : null,
+    "properties" : {
+      "LAYOUT_WIDTH" : 80,
+      "VIEW_ID" : "ImageView_0",
+      "ICON_SIZE" : 24,
+      "LAYOUT_GRAVITY" : 8388659,
+      "BACKGROUND_COLOR" : [ "com.crane.mockapp.core.model.theme.ThemeModelColor", "TRANSPARENT" ],
+      "LAYOUT_HEIGHT" : 80,
+      "ICON_COLOR" : [ "com.crane.mockapp.core.model.theme.ThemeModelColor", "ICON_ACTIVE" ],
+      "VIEW_CLASS_NAME" : "android.widget.ImageView",
+      "IMAGE_DRAWABLE" : "a18581f2-5af1-4d54-8706-ae4ff630b3cf/e.png",
+      "LAYOUT_MIN_WIDTH" : 24,
+      "LAYOUT_MIN_HEIGHT" : 24
+    }
+  },
+  "primaryThemeId" : 0,
+  "accentThemeId" : 0,
+  "lastViewIndex" : 1,
+  "fullScreen" : false
+}

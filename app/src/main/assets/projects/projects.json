@@ -1,0 +1,39 @@
+{
+  "projectModels" : [ {
+    "projectType" : "LOCAL_FILE_SYSTEM",
+    "id" : "a18581f2-5af1-4d54-8706-ae4ff630b3cf",
+    "name" : "MessengerApp",
+    "layoutCount" : 13,
+    "lastOpened" : 1491833010328
+  }, {
+    "projectType" : "LOCAL_FILE_SYSTEM",
+    "id" : "b04abfa8-524b-488a-b61f-7fcf9ff37222",
+    "name" : "NavigationDrawer",
+    "layoutCount" : 3,
+    "lastOpened" : 1491825645166
+  }, {
+    "projectType" : "LOCAL_FILE_SYSTEM",
+    "id" : "0890df42-dc6d-4955-8430-2befbcddf981",
+    "name" : "BottomNavigation",
+    "layoutCount" : 4,
+    "lastOpened" : 1491825624475
+  }, {
+    "projectType" : "LOCAL_FILE_SYSTEM",
+    "id" : "c2a722f2-772d-40a4-bdd1-4b30e0810f0c",
+    "name" : "Lists",
+    "layoutCount" : 17,
+    "lastOpened" : 1490967939273
+  }, {
+    "projectType" : "LOCAL_FILE_SYSTEM",
+    "id" : "54fd0202-da79-42cf-8ae5-4b78f5592a03",
+    "name" : "FloatButtons",
+    "layoutCount" : 2,
+    "lastOpened" : 1490967933599
+  }, {
+    "projectType" : "LOCAL_FILE_SYSTEM",
+    "id" : "2a84042b-0b68-46d5-92a4-c00629840f69",
+    "name" : "Cards",
+    "layoutCount" : 16,
+    "lastOpened" : 1490967928401
+  } ]
+}

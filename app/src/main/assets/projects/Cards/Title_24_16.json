@@ -1,0 +1,66 @@
+{
+  "layout" : {
+    "children" : [ {
+      "children" : [ {
+        "children" : [ {
+          "children" : null,
+          "properties" : {
+            "TEXT" : "Title goes here",
+            "VIEW_CLASS_NAME" : "android.widget.TextView",
+            "LAYOUT_WIDTH" : -2,
+            "VIEW_ID" : "TextView_4",
+            "BACKGROUND_COLOR" : [ "com.crane.mockapp.core.model.theme.ThemeModelColor", "TRANSPARENT" ],
+            "TEXT_COLOR" : [ "com.crane.mockapp.core.model.theme.ThemeModelColor", "TEXT_PRIMARY" ],
+            "LAYOUT_HEIGHT" : -2,
+            "TEXT_SIZE" : 24
+          }
+        }, {
+          "children" : null,
+          "properties" : {
+            "TEXT" : "Subtitle here",
+            "VIEW_CLASS_NAME" : "android.widget.TextView",
+            "LAYOUT_WIDTH" : -2,
+            "BACKGROUND_COLOR" : [ "com.crane.mockapp.core.model.theme.ThemeModelColor", "TRANSPARENT" ],
+            "VIEW_ID" : "TextView_5",
+            "TEXT_COLOR" : [ "com.crane.mockapp.core.model.theme.ThemeModelColor", "TEXT_SECONDARY" ],
+            "LAYOUT_HEIGHT" : -2
+          }
+        } ],
+        "properties" : {
+          "LAYOUT_MARGIN_START" : 0,
+          "LAYOUT_ORIENTATION" : 1,
+          "LAYOUT_MARGIN_BOTTOM" : 0,
+          "LAYOUT_MARGIN_END" : 0,
+          "VIEW_CLASS_NAME" : "android.widget.LinearLayout",
+          "LAYOUT_WIDTH" : -1,
+          "VIEW_ID" : "LinearLayout_3",
+          "BACKGROUND_COLOR" : [ "com.crane.mockapp.core.model.theme.ThemeModelColor", "TRANSPARENT" ],
+          "LAYOUT_HEIGHT" : -2,
+          "LAYOUT_MARGIN_TOP" : 0
+        }
+      } ],
+      "properties" : {
+        "LAYOUT_WIDTH" : -1,
+        "LAYOUT_HEIGHT" : -1,
+        "BACKGROUND_COLOR" : [ "com.crane.mockapp.core.model.theme.ThemeModelColor", "TRANSPARENT" ],
+        "VIEW_ID" : "LinearLayout_1",
+        "VIEW_CLASS_NAME" : "android.widget.LinearLayout"
+      }
+    } ],
+    "properties" : {
+      "VIEW_CLASS_NAME" : "android.widget.LinearLayout",
+      "LAYOUT_WIDTH" : -1,
+      "PADDING_START" : 16,
+      "BACKGROUND_COLOR" : [ "com.crane.mockapp.core.model.theme.ThemeModelColor", "TRANSPARENT" ],
+      "VIEW_ID" : "LinearLayout_0",
+      "PADDING_TOP" : 24,
+      "PADDING_BOTTOM" : 16,
+      "LAYOUT_HEIGHT" : -2,
+      "PADDING_END" : 16
+    }
+  },
+  "primaryThemeId" : 0,
+  "accentThemeId" : 0,
+  "lastViewIndex" : 1,
+  "fullScreen" : false
+}

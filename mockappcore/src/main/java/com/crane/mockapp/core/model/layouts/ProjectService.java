@@ -87,6 +87,8 @@ public interface ProjectService {
 
     LayoutDescriptor loadLayout(String projectId, String layoutId);
 
+    LayoutDescriptor loadLayoutByName(String projectName, String layoutName);
+
     void loadLayoutAsString(String projectId, String layoutId, OperationCallback<String> callback);
 
     void saveLayout(String projectId, String layoutName, LayoutDescriptor layoutDescriptor, OperationCallback<LayoutModel> callback);

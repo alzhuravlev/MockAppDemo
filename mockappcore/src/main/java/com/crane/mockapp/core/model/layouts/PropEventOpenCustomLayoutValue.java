@@ -2,6 +2,8 @@ package com.crane.mockapp.core.model.layouts;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 
 import com.crane.mockapp.core.Arguments;
 import com.crane.mockapp.core.PreviewActivity;
@@ -9,6 +11,8 @@ import com.crane.mockapp.core.model.theme.ThemeModel;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
+import java.util.List;
 
 /**
  * Created by crane2002 on 1/28/2017.
@@ -46,9 +50,16 @@ public class PropEventOpenCustomLayoutValue extends PropEventValue {
             previewActivity.showDialog(layoutValue.getProjectId(), layoutValue.getLayoutId());
         } else {
             Intent intent = new Intent(context, PreviewActivity.class);
-            intent.putExtra(Arguments.ARGUMENT_PROJECT_ID, layoutValue.getProjectId());
-            intent.putExtra(Arguments.ARGUMENT_LAYOUT_ID, layoutValue.getLayoutId());
-            context.startActivity(intent);
+
+            List<ResolveInfo> list = context.getPackageManager().queryIntentActivities(
+                    intent,
+                    PackageManager.MATCH_DEFAULT_ONLY);
+
+            if (list.size() > 0) {
+                intent.putExtra(Arguments.ARGUMENT_PROJECT_ID, layoutValue.getProjectId());
+                intent.putExtra(Arguments.ARGUMENT_LAYOUT_ID, layoutValue.getLayoutId());
+                context.startActivity(intent);
+            }
         }
     }
 

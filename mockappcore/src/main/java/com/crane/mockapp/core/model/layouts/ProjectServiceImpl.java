@@ -893,6 +893,30 @@ class ProjectServiceImpl implements ProjectService {
     }
 
     @Override
+    public LayoutDescriptor loadLayoutByName(String projectName, String layoutName) {
+        ProjectModel projectModel;
+        LayoutModel layoutModel;
+
+        Projects internalProjects = ensureInternalProjects();
+        Projects localProjects = ensureLocalProjects();
+
+        projectModel = internalProjects.findByName(projectName);
+        if (projectModel == null)
+            projectModel = localProjects.findByName(projectName);
+
+        if (projectModel == null)
+            return null;
+
+        Project project = ensureAnyProject(projectModel.id);
+
+        layoutModel = project.findByName(layoutName);
+        if (layoutModel == null)
+            return null;
+
+        return loadLayout(projectModel.id, layoutModel.id);
+    }
+
+    @Override
     public void loadLayout(String projectId, String layoutId, final OperationCallback<LayoutDescriptor> callback) {
         loadLayoutAsString(projectId, layoutId, new OperationCallback<String>() {
             @Override

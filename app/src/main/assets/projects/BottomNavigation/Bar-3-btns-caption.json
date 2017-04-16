@@ -1,0 +1,220 @@
+{
+  "layout" : {
+    "children" : [ {
+      "children" : [ {
+        "children" : null,
+        "properties" : {
+          "VIEW_ID" : "ImageView_5",
+          "ON_CLICK" : {
+            "@class" : "com.crane.mockapp.core.model.layouts.PropEventChangePropValues",
+            "props" : [ ],
+            "empty" : true
+          },
+          "ICON_DRAWABLE" : "gmd_restore",
+          "VISIBILITY" : 0,
+          "VIEW_CLASS_NAME" : "android.widget.ImageView"
+        }
+      }, {
+        "children" : null,
+        "properties" : {
+          "VIEW_ID" : "TextView_6",
+          "VIEW_CLASS_NAME" : "android.widget.TextView"
+        }
+      } ],
+      "properties" : {
+        "VIEW_ID" : "Button_7",
+        "ON_CLICK" : {
+          "@class" : "com.crane.mockapp.core.model.layouts.PropEventChangePropValues",
+          "props" : [ {
+            "viewIdPath" : "LinearLayout_14/Button_7/ImageView_5",
+            "prop" : "LAYOUT_MARGIN_TOP",
+            "value" : 6,
+            "animate" : null
+          }, {
+            "viewIdPath" : "LinearLayout_14/Button_8/ImageView_5",
+            "prop" : "LAYOUT_MARGIN_TOP",
+            "value" : 8,
+            "animate" : null
+          }, {
+            "viewIdPath" : "LinearLayout_14/Button_9/ImageView_5",
+            "prop" : "LAYOUT_MARGIN_TOP",
+            "value" : 8,
+            "animate" : null
+          }, {
+            "viewIdPath" : "LinearLayout_14/Button_7/TextView_6",
+            "prop" : "TEXT_SIZE",
+            "value" : 14,
+            "animate" : null
+          }, {
+            "viewIdPath" : "LinearLayout_14/Button_8/TextView_6",
+            "prop" : "TEXT_SIZE",
+            "value" : 12,
+            "animate" : null
+          }, {
+            "viewIdPath" : "LinearLayout_14/Button_9/TextView_6",
+            "prop" : "TEXT_SIZE",
+            "value" : 12,
+            "animate" : null
+          } ],
+          "empty" : false
+        },
+        "LAYOUT_HEIGHT" : 56,
+        "LAYOUT_WEIGHT" : 1,
+        "CUSTOM_LAYOUT_LAYOUT" : {
+          "@class" : "com.crane.mockapp.core.model.layouts.PropLayoutValue",
+          "projectId" : "0890df42-dc6d-4955-8430-2befbcddf981",
+          "layoutId" : "cca11135-7578-4f25-9e64-ea195b0ba698"
+        },
+        "VISIBILITY" : 0,
+        "LAYOUT_WIDTH" : 0
+      }
+    }, {
+      "children" : [ {
+        "children" : null,
+        "properties" : {
+          "VIEW_ID" : "ImageView_5",
+          "ON_CLICK" : {
+            "@class" : "com.crane.mockapp.core.model.layouts.PropEventChangePropValues",
+            "props" : [ ],
+            "empty" : true
+          },
+          "ICON_DRAWABLE" : "gmd_favorite",
+          "VISIBILITY" : 0,
+          "VIEW_CLASS_NAME" : "android.widget.ImageView"
+        }
+      }, {
+        "children" : null,
+        "properties" : {
+          "VIEW_ID" : "TextView_6",
+          "VIEW_CLASS_NAME" : "android.widget.TextView"
+        }
+      } ],
+      "properties" : {
+        "VIEW_ID" : "Button_8",
+        "ON_CLICK" : {
+          "@class" : "com.crane.mockapp.core.model.layouts.PropEventChangePropValues",
+          "props" : [ {
+            "viewIdPath" : "LinearLayout_14/Button_7/ImageView_5",
+            "prop" : "LAYOUT_MARGIN_TOP",
+            "value" : 8,
+            "animate" : null
+          }, {
+            "viewIdPath" : "LinearLayout_14/Button_8/ImageView_5",
+            "prop" : "LAYOUT_MARGIN_TOP",
+            "value" : 6,
+            "animate" : null
+          }, {
+            "viewIdPath" : "LinearLayout_14/Button_9/ImageView_5",
+            "prop" : "LAYOUT_MARGIN_TOP",
+            "value" : 8,
+            "animate" : null
+          }, {
+            "viewIdPath" : "LinearLayout_14/Button_7/TextView_6",
+            "prop" : "TEXT_SIZE",
+            "value" : 12,
+            "animate" : null
+          }, {
+            "viewIdPath" : "LinearLayout_14/Button_8/TextView_6",
+            "prop" : "TEXT_SIZE",
+            "value" : 14,
+            "animate" : null
+          }, {
+            "viewIdPath" : "LinearLayout_14/Button_9/TextView_6",
+            "prop" : "TEXT_SIZE",
+            "value" : 12,
+            "animate" : null
+          } ],
+          "empty" : false
+        },
+        "LAYOUT_WEIGHT" : 1,
+        "CUSTOM_LAYOUT_LAYOUT" : {
+          "@class" : "com.crane.mockapp.core.model.layouts.PropLayoutValue",
+          "projectId" : "0890df42-dc6d-4955-8430-2befbcddf981",
+          "layoutId" : "cca11135-7578-4f25-9e64-ea195b0ba698"
+        },
+        "VISIBILITY" : 0,
+        "LAYOUT_WIDTH" : 0
+      }
+    }, {
+      "children" : [ {
+        "children" : null,
+        "properties" : {
+          "VIEW_ID" : "ImageView_5",
+          "ON_CLICK" : {
+            "@class" : "com.crane.mockapp.core.model.layouts.PropEventChangePropValues",
+            "props" : [ ],
+            "empty" : true
+          },
+          "ICON_DRAWABLE" : "gmd_near_me",
+          "VISIBILITY" : 0,
+          "VIEW_CLASS_NAME" : "android.widget.ImageView"
+        }
+      }, {
+        "children" : null,
+        "properties" : {
+          "VIEW_ID" : "TextView_6",
+          "VIEW_CLASS_NAME" : "android.widget.TextView"
+        }
+      } ],
+      "properties" : {
+        "VIEW_ID" : "Button_9",
+        "ON_CLICK" : {
+          "@class" : "com.crane.mockapp.core.model.layouts.PropEventChangePropValues",
+          "props" : [ {
+            "viewIdPath" : "LinearLayout_14/Button_7/ImageView_5",
+            "prop" : "LAYOUT_MARGIN_TOP",
+            "value" : 8,
+            "animate" : null
+          }, {
+            "viewIdPath" : "LinearLayout_14/Button_8/ImageView_5",
+            "prop" : "LAYOUT_MARGIN_TOP",
+            "value" : 8,
+            "animate" : null
+          }, {
+            "viewIdPath" : "LinearLayout_14/Button_9/ImageView_5",
+            "prop" : "LAYOUT_MARGIN_TOP",
+            "value" : 6,
+            "animate" : null
+          }, {
+            "viewIdPath" : "LinearLayout_14/Button_7/TextView_6",
+            "prop" : "TEXT_SIZE",
+            "value" : 12,
+            "animate" : null
+          }, {
+            "viewIdPath" : "LinearLayout_14/Button_8/TextView_6",
+            "prop" : "TEXT_SIZE",
+            "value" : 12,
+            "animate" : null
+          }, {
+            "viewIdPath" : "LinearLayout_14/Button_9/TextView_6",
+            "prop" : "TEXT_SIZE",
+            "value" : 14,
+            "animate" : null
+          } ],
+          "empty" : false
+        },
+        "LAYOUT_WEIGHT" : 1,
+        "CUSTOM_LAYOUT_LAYOUT" : {
+          "@class" : "com.crane.mockapp.core.model.layouts.PropLayoutValue",
+          "projectId" : "0890df42-dc6d-4955-8430-2befbcddf981",
+          "layoutId" : "cca11135-7578-4f25-9e64-ea195b0ba698"
+        },
+        "VISIBILITY" : 0,
+        "LAYOUT_WIDTH" : 0
+      }
+    } ],
+    "properties" : {
+      "VIEW_ID" : "LinearLayout_14",
+      "LAYOUT_HEIGHT" : -2,
+      "LAYOUT_GRAVITY" : 8388691,
+      "LAYOUT_WIDTH" : -1,
+      "ELEVATION" : 8,
+      "BACKGROUND_COLOR" : [ "com.crane.mockapp.core.model.theme.ThemeModelColor", "P50" ],
+      "VIEW_CLASS_NAME" : "android.widget.LinearLayout"
+    }
+  },
+  "primaryThemeId" : 128,
+  "accentThemeId" : 105,
+  "lastViewIndex" : 15,
+  "fullScreen" : false
+}

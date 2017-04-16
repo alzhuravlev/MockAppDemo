@@ -1,0 +1,27 @@
+{
+  "layout" : {
+    "children" : null,
+    "properties" : {
+      "TEXT_GRAVITY" : 8388627,
+      "PADDING_END" : 16,
+      "PADDING_BOTTOM" : 0,
+      "VIEW_CLASS_NAME" : "android.widget.TextView",
+      "TEXT_COLOR" : [ "com.crane.mockapp.core.model.theme.ThemeModelColor", "TEXT_SECONDARY" ],
+      "TEXT_MAX_LINES" : 1,
+      "LAYOUT_HEIGHT" : 48,
+      "LAYOUT_WIDTH" : -1,
+      "TEXT" : "Subheader",
+      "PADDING_START" : 16,
+      "LAYOUT_MIN_WIDTH" : 24,
+      "TEXT_MIN_LINES" : 1,
+      "LAYOUT_MIN_HEIGHT" : 24,
+      "PADDING_TOP" : 0,
+      "BACKGROUND_COLOR" : [ "com.crane.mockapp.core.model.theme.ThemeModelColor", "TRANSPARENT" ],
+      "VIEW_ID" : "TextView_0"
+    }
+  },
+  "primaryThemeId" : 0,
+  "accentThemeId" : 0,
+  "lastViewIndex" : 1,
+  "fullScreen" : false
+}

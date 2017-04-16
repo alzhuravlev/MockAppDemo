@@ -1,0 +1,122 @@
+{
+  "layout" : {
+    "children" : [ {
+      "children" : null,
+      "properties" : {
+        "LAYOUT_WIDTH" : -1,
+        "PADDING_END" : 0,
+        "PADDING_TOP" : 0,
+        "PADDING_BOTTOM" : 0,
+        "PADDING_START" : 0,
+        "IMAGE_SCALE_TYPE" : [ "android.widget.ImageView$ScaleType", "FIT_CENTER" ],
+        "VIEW_ID" : "ImageButton_1",
+        "LAYOUT_HEIGHT" : -2,
+        "BACKGROUND_COLOR" : [ "com.crane.mockapp.core.model.theme.ThemeModelColor", "TRANSPARENT" ],
+        "VIEW_CLASS_NAME" : "android.widget.ImageButton",
+        "ICON_SIZE" : 24,
+        "IMAGE_DRAWABLE" : "2a84042b-0b68-46d5-92a4-c00629840f69/d.png",
+        "ICON_COLOR" : [ "com.crane.mockapp.core.model.theme.ThemeModelColor", "ICON_ACTIVE" ]
+      }
+    }, {
+      "children" : [ {
+        "children" : [ {
+          "children" : [ {
+            "children" : [ {
+              "children" : null,
+              "properties" : {
+                "VIEW_CLASS_NAME" : "android.widget.TextView",
+                "VIEW_ID" : "TextView_4"
+              }
+            }, {
+              "children" : null,
+              "properties" : {
+                "VIEW_CLASS_NAME" : "android.widget.TextView",
+                "VIEW_ID" : "TextView_5"
+              }
+            } ],
+            "properties" : {
+              "VIEW_CLASS_NAME" : "android.widget.LinearLayout",
+              "VIEW_ID" : "LinearLayout_3"
+            }
+          } ],
+          "properties" : {
+            "VIEW_CLASS_NAME" : "android.widget.LinearLayout",
+            "VIEW_ID" : "LinearLayout_1"
+          }
+        } ],
+        "properties" : {
+          "VIEW_ID" : "Title_24_16_3",
+          "CUSTOM_LAYOUT_LAYOUT" : {
+            "@class" : "com.crane.mockapp.core.model.layouts.PropLayoutValue",
+            "projectId" : "2a84042b-0b68-46d5-92a4-c00629840f69",
+            "layoutId" : "32e7b6d6-0ea5-4c18-a844-af6f8bd4d0c3"
+          }
+        }
+      }, {
+        "children" : [ {
+          "children" : null,
+          "properties" : {
+            "BACKGROUND_COLOR" : [ "com.crane.mockapp.core.model.theme.ThemeModelColor", "TRANSPARENT" ],
+            "VIEW_CLASS_NAME" : "android.widget.Button",
+            "VIEW_ID" : "Button_1"
+          }
+        }, {
+          "children" : null,
+          "properties" : {
+            "BACKGROUND_COLOR" : [ "com.crane.mockapp.core.model.theme.ThemeModelColor", "TRANSPARENT" ],
+            "VIEW_CLASS_NAME" : "android.widget.Button",
+            "VIEW_ID" : "Button_3"
+          }
+        }, {
+          "children" : null,
+          "properties" : {
+            "VIEW_CLASS_NAME" : "android.view.View",
+            "VIEW_ID" : "View_4"
+          }
+        }, {
+          "children" : null,
+          "properties" : {
+            "VIEW_CLASS_NAME" : "android.widget.ImageView",
+            "VISIBILITY" : 8,
+            "VIEW_ID" : "ImageView_5"
+          }
+        } ],
+        "properties" : {
+          "VIEW_ID" : "ActionFlatButtons_Expand_4",
+          "CUSTOM_LAYOUT_LAYOUT" : {
+            "@class" : "com.crane.mockapp.core.model.layouts.PropLayoutValue",
+            "projectId" : "2a84042b-0b68-46d5-92a4-c00629840f69",
+            "layoutId" : "031d2eb0-3658-44f5-90b6-8848670b402f"
+          }
+        }
+      } ],
+      "properties" : {
+        "LAYOUT_WIDTH" : -1,
+        "LAYOUT_GRAVITY" : 8388691,
+        "BACKGROUND_ALPHA" : 70,
+        "VIEW_ID" : "LinearLayout_2",
+        "LAYOUT_HEIGHT" : -2,
+        "LAYOUT_ORIENTATION" : 1,
+        "VIEW_CLASS_NAME" : "android.widget.LinearLayout",
+        "BACKGROUND_COLOR" : [ "com.crane.mockapp.core.model.theme.ThemeModelColor", "DarkSlateGray" ]
+      }
+    } ],
+    "properties" : {
+      "ELEVATION" : 4,
+      "LAYOUT_WIDTH" : -1,
+      "OUTLINE_ENABLED" : true,
+      "OUTLINE_CLIP_TO_OUTLINE" : true,
+      "VIEW_ID" : "FrameLayout_0",
+      "OUTLINE_RADIUS" : 2,
+      "VIEW_CLASS_NAME" : "android.widget.FrameLayout",
+      "LAYOUT_HEIGHT" : -2,
+      "BACKGROUND_COLOR" : [ "com.crane.mockapp.core.model.theme.ThemeModelColor", "TRANSPARENT" ]
+    }
+  },
+  "primaryThemeId" : 0,
+  "accentThemeId" : 0,
+  "lastViewIndex" : 5,
+  "fullScreen" : false,
+  "navDrawerLayout" : null,
+  "statusBarColor" : null
+}
