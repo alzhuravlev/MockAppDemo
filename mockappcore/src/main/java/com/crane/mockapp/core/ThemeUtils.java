@@ -28,7 +28,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.crane.mockapp.*;
 import com.crane.mockapp.core.model.layouts.LayoutDescriptor;
 import com.crane.mockapp.core.model.layouts.ProjectServiceFactory;
 import com.crane.mockapp.core.model.layouts.PropEventValue;
@@ -478,7 +477,7 @@ public class ThemeUtils {
             RecyclerViewLayoutAdapter adapter = (RecyclerViewLayoutAdapter) recyclerView.getAdapter();
 
             if (layoutValue != null && (adapter == null || force)) {
-                LayoutDescriptor layoutDescriptor = ProjectServiceFactory.getInstace(context).loadLayout(layoutValue.getProjectId(), layoutValue.getLayoutId());
+                LayoutDescriptor layoutDescriptor = ProjectServiceFactory.getInstance(context).loadLayout(layoutValue.getProjectId(), layoutValue.getLayoutId());
                 if (layoutDescriptor != null && layoutDescriptor.getLayout() != null) {
                     adapter = new RecyclerViewLayoutAdapter(layoutDescriptor.getLayout());
                     recyclerView.setAdapter(adapter);

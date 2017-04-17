@@ -49,7 +49,7 @@ public class PdfLayoutGenerator implements ImageProvider {
 
     public void generate(OutputStream outputStream) {
 
-        LayoutDescriptor layoutDescriptor = ProjectServiceFactory.getInstace(context).loadLayout(projectId, layoutId);
+        LayoutDescriptor layoutDescriptor = ProjectServiceFactory.getInstance(context).loadLayout(projectId, layoutId);
 
         Object root = LayoutScreenshoter.inflateForScreenshot(context, layoutDescriptor, this);
         if (root == null)
@@ -84,7 +84,7 @@ public class PdfLayoutGenerator implements ImageProvider {
         if (propLayoutValue == null)
             return;
 
-        LayoutDescriptor navDrawerLayoutDescriptor = ProjectServiceFactory.getInstace(context).loadLayout(propLayoutValue.getProjectId(), propLayoutValue.getLayoutId());
+        LayoutDescriptor navDrawerLayoutDescriptor = ProjectServiceFactory.getInstance(context).loadLayout(propLayoutValue.getProjectId(), propLayoutValue.getLayoutId());
         if (navDrawerLayoutDescriptor == null || navDrawerLayoutDescriptor.getLayout() == null)
             return;
 
@@ -97,8 +97,8 @@ public class PdfLayoutGenerator implements ImageProvider {
     }
 
     private String formatTitle(String projectId, String layoutId) {
-        String projectName = ProjectServiceFactory.getInstace(context).formatProjectName(projectId);
-        String layoutName = ProjectServiceFactory.getInstace(context).formatLayoutName(projectId, layoutId);
+        String projectName = ProjectServiceFactory.getInstance(context).formatProjectName(projectId);
+        String layoutName = ProjectServiceFactory.getInstance(context).formatLayoutName(projectId, layoutId);
         return projectName + ". " + layoutName;
     }
 
@@ -120,7 +120,7 @@ public class PdfLayoutGenerator implements ImageProvider {
 
     @Override
     public Bitmap loadImage(String imageFileName, int reqWidth, int reqHeight) {
-        return ProjectServiceFactory.getInstace(context).loadImage(projectId, imageFileName, reqWidth, reqHeight);
+        return ProjectServiceFactory.getInstance(context).loadImage(projectId, imageFileName, reqWidth, reqHeight);
     }
 
     private class PageGenerator {

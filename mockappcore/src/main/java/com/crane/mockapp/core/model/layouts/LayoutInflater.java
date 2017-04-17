@@ -333,7 +333,7 @@ public class LayoutInflater {
         if (customLayouts.contains(layoutKey))
             return null;
 
-        LayoutDescriptor layoutDescriptor = ProjectServiceFactory.getInstace(context).loadLayout(layoutValue.getProjectId(), layoutValue.getLayoutId());
+        LayoutDescriptor layoutDescriptor = ProjectServiceFactory.getInstance(context).loadLayout(layoutValue.getProjectId(), layoutValue.getLayoutId());
         if (layoutDescriptor == null || layoutDescriptor.getLayout() == null && parent instanceof ViewGroup) {
             android.view.LayoutInflater layoutInflater = android.view.LayoutInflater.from(context);
             TextView textView = (TextView) layoutInflater.inflate(R.layout.error_custom_layout_not_found, (ViewGroup) parent, false);

@@ -114,7 +114,7 @@ public class PreviewActivity extends AppCompatActivity implements ImageProvider 
 
     @Override
     public Bitmap loadImage(String imageFileName, int reqWidth, int reqHeight) {
-        return ProjectServiceFactory.getInstace(this).loadImage(getProjectIdArgument(), imageFileName, reqWidth, reqHeight);
+        return ProjectServiceFactory.getInstance(this).loadImage(getProjectIdArgument(), imageFileName, reqWidth, reqHeight);
     }
 
     public void openDrawer() {

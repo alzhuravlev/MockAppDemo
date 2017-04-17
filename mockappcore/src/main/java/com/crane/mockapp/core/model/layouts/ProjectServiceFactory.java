@@ -9,9 +9,13 @@ import android.content.Context;
 public class ProjectServiceFactory {
     private static ProjectService service;
 
-    public static ProjectService getInstace(Context context) {
+    public static ProjectService getInstance(Context context) {
         if (service == null)
             service = new ProjectServiceImpl(context);
         return service;
+    }
+
+    public static void init(Context context, String path) {
+        service = new ProjectServiceImpl(context, path);
     }
 }

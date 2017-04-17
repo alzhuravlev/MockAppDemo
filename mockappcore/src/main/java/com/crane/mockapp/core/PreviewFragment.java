@@ -11,10 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 
-import com.crane.mockapp.core.Arguments;
-import com.crane.mockapp.core.ImageProvider;
-import com.crane.mockapp.core.ThemeUtils;
-import com.crane.mockapp.core.Utils;
 import com.crane.mockapp.core.model.layouts.LayoutDescriptor;
 import com.crane.mockapp.core.model.layouts.ProjectServiceFactory;
 import com.crane.mockapp.core.model.theme.ThemeModel;
@@ -80,6 +76,6 @@ public class PreviewFragment extends DialogFragment implements ImageProvider {
 
     @Override
     public Bitmap loadImage(String imageFileName, int reqWidth, int reqHeight) {
-        return ProjectServiceFactory.getInstace(getContext()).loadImage(getProjectIdArgument(), imageFileName, reqWidth, reqHeight);
+        return ProjectServiceFactory.getInstance(getContext()).loadImage(getProjectIdArgument(), imageFileName, reqWidth, reqHeight);
     }
 }

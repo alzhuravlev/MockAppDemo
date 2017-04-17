@@ -71,6 +71,8 @@ public interface ProjectService {
 
     void deleteProject(String projectId, OperationCallback<Void> callback);
 
+    void deleteProjectByName(String projectName, OperationCallback<Void> callback);
+
     void renameProject(String projectId, String newProjectName, OperationCallback<Void> callback);
 
     void deleteLayout(String projectId, String layoutId, OperationCallback<Void> callback);

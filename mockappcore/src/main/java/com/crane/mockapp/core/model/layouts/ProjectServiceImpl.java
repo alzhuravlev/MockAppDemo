@@ -58,20 +58,26 @@ class ProjectServiceImpl implements ProjectService {
     private Map<String, Project> projectLocalMap = new HashMap<>();
     private Map<String, Project> projectInternalMap = new HashMap<>();
 
+    private File localStorageFolder;
+
     ProjectServiceImpl(Context context) {
         this.context = context;
+        this.localStorageFolder = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), LOCAL_STORAGE_FOLDER);
+    }
+
+    ProjectServiceImpl(Context context, String path) {
+        this.context = context;
+        this.localStorageFolder = new File(path);
     }
 
     private File getLocalStorageFolder() {
         if (!MEDIA_MOUNTED.equals(Environment.getExternalStorageState()))
             return null;
 
-        File folderFile = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), LOCAL_STORAGE_FOLDER);
-
-        if (!folderFile.exists())
-            if (!folderFile.mkdirs())
+        if (!localStorageFolder.exists())
+            if (!localStorageFolder.mkdirs())
                 return null;
-        return folderFile;
+        return localStorageFolder;
     }
 
     private boolean deleteFileOrFolder(File file) {
@@ -768,6 +774,14 @@ class ProjectServiceImpl implements ProjectService {
     }
 
     @Override
+    public void deleteProjectByName(String projectName, OperationCallback<Void> callback) {
+        Projects localProjects = ensureLocalProjects();
+        ProjectModel projectModel = localProjects.findByName(projectName);
+        if (projectModel != null)
+            deleteProject(projectModel.id, callback);
+    }
+
+    @Override
     public void renameProject(String projectId, String newProjectName, OperationCallback<Void> callback) {
         File projectFolder = getLocalProjectFolderById(projectId, false);
         File projectFolderDest = getLocalProjectFolderByName(newProjectName, false);
@@ -894,26 +908,30 @@ class ProjectServiceImpl implements ProjectService {
 
     @Override
     public LayoutDescriptor loadLayoutByName(String projectName, String layoutName) {
-        ProjectModel projectModel;
-        LayoutModel layoutModel;
+        ProjectModel projectModel = null;
+        LayoutModel layoutModel = null;
 
-        Projects internalProjects = ensureInternalProjects();
         Projects localProjects = ensureLocalProjects();
 
-        projectModel = internalProjects.findByName(projectName);
-        if (projectModel == null)
-            projectModel = localProjects.findByName(projectName);
+        projectModel = localProjects.findByName(projectName);
+        if (projectModel != null) {
+            Project localProject = ensureLocalProject(projectModel.id);
+            layoutModel = localProject.findByName(layoutName);
+        }
 
-        if (projectModel == null)
-            return null;
+        if (layoutModel == null) {
+            Projects internalProjects = ensureInternalProjects();
 
-        Project project = ensureAnyProject(projectModel.id);
+            projectModel = internalProjects.findByName(projectName);
+            if (projectModel != null) {
+                Project internalProject = ensureInternalProject(projectModel.id);
+                layoutModel = internalProject.findByName(layoutName);
+            }
+        }
 
-        layoutModel = project.findByName(layoutName);
-        if (layoutModel == null)
-            return null;
-
-        return loadLayout(projectModel.id, layoutModel.id);
+        if (projectModel != null && layoutModel != null)
+            return loadLayout(projectModel.id, layoutModel.id);
+        return null;
     }
 
     @Override

@@ -29,7 +29,7 @@ public class WidgetModelLayout extends WidgetModel {
 
     @Override
     protected Object doNewViewInstance(Object parent) {
-        LayoutDescriptor layoutDescriptor = ProjectServiceFactory.getInstace(context).loadLayout(projectId, layoutId);
+        LayoutDescriptor layoutDescriptor = ProjectServiceFactory.getInstance(context).loadLayout(projectId, layoutId);
         if (layoutDescriptor == null || layoutDescriptor.getLayout() == null)
             return null;
         Object view = LayoutInflater.inflate(context, layoutDescriptor.getLayout(), parent, false);
@@ -42,7 +42,7 @@ public class WidgetModelLayout extends WidgetModel {
 
     @Override
     public String getTitle() {
-        return ProjectServiceFactory.getInstace(context).formatLayoutName(projectId, layoutId);
+        return ProjectServiceFactory.getInstance(context).formatLayoutName(projectId, layoutId);
     }
 
     @Override

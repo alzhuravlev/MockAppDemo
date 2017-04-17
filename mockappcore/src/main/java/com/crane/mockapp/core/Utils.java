@@ -3,34 +3,26 @@ package com.crane.mockapp.core;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Rect;
-import android.graphics.Shader;
 import android.graphics.drawable.Drawable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.ActionMenuView;
 import android.support.v7.widget.LinearLayoutCompat;
-import android.support.v7.widget.ListPopupWindow;
-import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.SparseArray;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewOutlineProvider;
-import android.widget.AdapterView;
-import android.widget.BaseAdapter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ListAdapter;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.ViewAnimator;
 
-import com.crane.mockapp.core.R;
 import com.crane.mockapp.core.model.layouts.LayoutDescriptor;
 import com.crane.mockapp.core.model.layouts.ProjectServiceFactory;
 import com.crane.mockapp.core.model.layouts.PropEventChangePropValue;
@@ -38,8 +30,6 @@ import com.crane.mockapp.core.model.layouts.PropEventChangePropValues;
 import com.crane.mockapp.core.model.layouts.PropEventValue;
 import com.crane.mockapp.core.model.layouts.PropLayoutValue;
 import com.crane.mockapp.core.model.props.PropModel;
-import com.crane.mockapp.core.model.theme.ThemeModel;
-import com.crane.mockapp.core.model.theme.ThemeModelColor;
 
 import java.lang.reflect.Constructor;
 import java.util.ArrayList;
@@ -1195,7 +1185,7 @@ public class Utils {
             if (layoutValue == null)
                 baseId = view.getClass().getSimpleName();
             else
-                baseId = ProjectServiceFactory.getInstace(viewIdGenerator.getContext()).formatLayoutName(layoutValue.getProjectId(), layoutValue.getLayoutId());
+                baseId = ProjectServiceFactory.getInstance(viewIdGenerator.getContext()).formatLayoutName(layoutValue.getProjectId(), layoutValue.getLayoutId());
 
             id = baseId + "_" + viewIdGenerator.getLastViewIndex();
             viewIdGenerator.incViewIndex();
@@ -1406,7 +1396,7 @@ public class Utils {
         if (layoutDescriptorString != null)
             layoutDescriptor = LayoutDescriptor.fromString(layoutDescriptorString);
         else if (projectId != null && layoutId != null)
-            layoutDescriptor = ProjectServiceFactory.getInstace(context).loadLayout(projectId, layoutId);
+            layoutDescriptor = ProjectServiceFactory.getInstance(context).loadLayout(projectId, layoutId);
         return layoutDescriptor;
     }
 
