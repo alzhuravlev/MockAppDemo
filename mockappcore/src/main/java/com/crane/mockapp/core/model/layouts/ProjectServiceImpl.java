@@ -94,7 +94,8 @@ class ProjectServiceImpl implements ProjectService {
             return file.delete();
     }
 
-    private File getLocalTmpFolder() {
+    @Override
+    public File getLocalTmpFolder() {
         File localStorageFolder = getLocalStorageFolder();
         if (localStorageFolder == null)
             return null;
@@ -779,6 +780,25 @@ class ProjectServiceImpl implements ProjectService {
         ProjectModel projectModel = localProjects.findByName(projectName);
         if (projectModel != null)
             deleteProject(projectModel.id, callback);
+        else
+            callback.onFail(null);
+    }
+
+    @Override
+    public boolean deleteProjectByName(String projectName) {
+        final ResultHolder<Boolean> holder = new ResultHolder<>();
+        deleteProjectByName(projectName, new OperationCallback<Void>() {
+            @Override
+            public void onSuccess(Void result) {
+                holder.result = true;
+            }
+
+            @Override
+            public void onFail(String message) {
+                holder.result = false;
+            }
+        });
+        return holder.result;
     }
 
     @Override
@@ -1282,6 +1302,22 @@ class ProjectServiceImpl implements ProjectService {
         saveProjects(projects);
 
         callback.onSuccess(projectModel);
+    }
+
+    @Override
+    public ProjectModel importZip(String pathToZipFile) {
+        final ResultHolder<ProjectModel> holder = new ResultHolder<>();
+        importZip(pathToZipFile, new OperationCallback<ProjectModel>() {
+            @Override
+            public void onSuccess(ProjectModel result) {
+                holder.result = result;
+            }
+
+            @Override
+            public void onFail(String message) {
+            }
+        });
+        return holder.result;
     }
 
     @Override

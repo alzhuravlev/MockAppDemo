@@ -4,6 +4,7 @@ import android.graphics.Bitmap;
 
 import com.crane.mockapp.core.OperationCallback;
 
+import java.io.File;
 import java.util.List;
 
 /**
@@ -73,6 +74,8 @@ public interface ProjectService {
 
     void deleteProjectByName(String projectName, OperationCallback<Void> callback);
 
+    boolean deleteProjectByName(String projectName);
+
     void renameProject(String projectId, String newProjectName, OperationCallback<Void> callback);
 
     void deleteLayout(String projectId, String layoutId, OperationCallback<Void> callback);
@@ -115,9 +118,13 @@ public interface ProjectService {
 
     void importZip(String pathToZipFile, OperationCallback<ProjectModel> callback);
 
+    ProjectModel importZip(String pathToZipFile);
+
     void previewLayout(String projectId, String layoutId);
 
     void previewMainLayout(String projectId);
 
     void generatePdf(String projectId, String layoutId, OperationCallback<String> callback);
+
+    File getLocalTmpFolder();
 }
