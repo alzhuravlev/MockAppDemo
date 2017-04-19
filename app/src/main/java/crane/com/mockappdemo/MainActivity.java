@@ -1,20 +1,17 @@
 package crane.com.mockappdemo;
 
-import android.graphics.Bitmap;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.crane.mockapp.core.ImageProvider;
-import com.crane.mockapp.core.ThemeUtils;
-import com.crane.mockapp.core.model.layouts.LayoutDescriptor;
+import com.crane.mockapp.core.Utils;
+import com.crane.mockapp.core.model.layouts.LayoutInflater;
 import com.crane.mockapp.core.model.layouts.ProjectServiceFactory;
-import com.crane.mockapp.core.model.theme.ThemeModel;
-import com.crane.mockapp.core.model.theme.ThemeModelServiceFactory;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -25,7 +22,7 @@ import java.net.URL;
 
 import javax.net.ssl.HttpsURLConnection;
 
-public class MainActivity extends AppCompatActivity implements ImageProvider {
+public class MainActivity extends AppCompatActivity {
 
     private DownloadTask downloadTask;
     private ProgressBar progressBar;
@@ -47,20 +44,21 @@ public class MainActivity extends AppCompatActivity implements ImageProvider {
         super.onStop();
     }
 
-    @Override
-    public Bitmap loadImage(String imageFileName, int reqWidth, int reqHeight) {
-        return ProjectServiceFactory.getInstance(this).loadImage(null, imageFileName, reqWidth, reqHeight);
-    }
-
     private void refresh(boolean download) {
         ViewGroup container = (ViewGroup) findViewById(R.id.container);
-        LayoutDescriptor layoutDescriptor = ProjectServiceFactory.getInstance(this).loadLayoutByName("Cards", "LargeMedia_1_1");
-        if (layoutDescriptor != null && layoutDescriptor.getLayout() != null) {
-            int primaryThemeId = layoutDescriptor.getPrimaryThemeId();
-            int accentThemeId = layoutDescriptor.getAccentThemeId();
-            Object view = com.crane.mockapp.core.model.layouts.LayoutInflater.inflate(this, layoutDescriptor.getLayout(), container, true);
-            ThemeModel themeModel = ThemeModelServiceFactory.getInstace(this).buildTheme(primaryThemeId, accentThemeId);
-            ThemeUtils.applyThemeToViewHierarchy(this, false, this, view, themeModel, false);
+        Object view = LayoutInflater.inflate(this, "Cards", "LargeMedia_1_1", container, true);
+        if (view != null) {
+            Object buttonObject3 = Utils.findViewByViewIdPath(view, "FrameLayout_0/LinearLayout_2/ActionFlatButtons_Expand_4/Button_3");
+            if (buttonObject3 != null) {
+                Button button = (Button) buttonObject3;
+                button.setText("DO IT");
+                button.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(MainActivity.this, "DO IT clicked", Toast.LENGTH_LONG).show();
+                    }
+                });
+            }
         } else if (download)
             downloadProject("https://onedrive.live.com/download?cid=E6A1EF25023FBD20&resid=E6A1EF25023FBD20%21691&authkey=AE4YV2NJAGuRHA0");
         else

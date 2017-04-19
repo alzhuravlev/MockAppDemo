@@ -1,16 +1,21 @@
 package com.crane.mockapp.core.model.layouts;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.graphics.Shader;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.crane.mockapp.core.ImageProvider;
 import com.crane.mockapp.core.R;
+import com.crane.mockapp.core.ThemeUtils;
 import com.crane.mockapp.core.Utils;
 import com.crane.mockapp.core.model.props.PropModel;
+import com.crane.mockapp.core.model.theme.ThemeModel;
 import com.crane.mockapp.core.model.theme.ThemeModelColor;
+import com.crane.mockapp.core.model.theme.ThemeModelServiceFactory;
 
 import java.lang.reflect.Method;
 import java.util.ArrayDeque;
@@ -398,4 +403,25 @@ public class LayoutInflater {
             Utils.addViewToParent(parent, view);
         return view;
     }
+
+    public static Object inflate(final Context context, String projectName, String layoutName, Object parent, boolean attachToParent) {
+        LayoutDescriptor layoutDescriptor = ProjectServiceFactory.getInstance(context).loadLayoutByName(projectName, layoutName);
+        if (layoutDescriptor != null && layoutDescriptor.getLayout() != null) {
+            int primaryThemeId = layoutDescriptor.getPrimaryThemeId();
+            int accentThemeId = layoutDescriptor.getAccentThemeId();
+            Object view = LayoutInflater.inflate(context, layoutDescriptor.getLayout(), parent, attachToParent);
+            if (view != null) {
+                ThemeModel themeModel = ThemeModelServiceFactory.getInstace(context).buildTheme(primaryThemeId, accentThemeId);
+                ThemeUtils.applyThemeToViewHierarchy(context, false, new ImageProvider() {
+                    @Override
+                    public Bitmap loadImage(String imageFileName, int reqWidth, int reqHeight) {
+                        return ProjectServiceFactory.getInstance(context).loadImage(null, imageFileName, reqWidth, reqHeight);
+                    }
+                }, view, themeModel, false);
+                return view;
+            }
+        }
+        return null;
+    }
+
 }
