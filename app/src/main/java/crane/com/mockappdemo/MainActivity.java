@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements ImageProvider {
             ThemeModel themeModel = ThemeModelServiceFactory.getInstace(this).buildTheme(primaryThemeId, accentThemeId);
             ThemeUtils.applyThemeToViewHierarchy(this, false, this, view, themeModel, false);
         } else if (download)
-            downloadProject("https://rkpmww-dm2305.files.1drv.com/y4mbwF3JT-r5vI4a3FOLQMi_GjJJuDcLl06n-lKIx6I54UNYRXsoLJ_2X_AvmyqRp2fWnr_iTRSQY_t6x4xMBJIVjdfH3NM8IU9is2xJPE-Ewxb_4QR44jKAZVx6qsay-6HLrZzy2oIVC7ndXGYbKQskDB7NhLRJ4axEQhnLmmDs91wrymjrXz-5983etqp6exJ/Cards.zip?download&psid=1");
+            downloadProject("https://onedrive.live.com/download?cid=E6A1EF25023FBD20&resid=E6A1EF25023FBD20%21691&authkey=AE4YV2NJAGuRHA0");
         else
             Toast.makeText(this, "Unable to inflate layout", Toast.LENGTH_LONG).show();
     }
