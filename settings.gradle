@@ -1,1 +1,1 @@
-include ':app', ':mockappcore'
+include ':app'
