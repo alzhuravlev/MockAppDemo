@@ -6,7 +6,7 @@ This library is intended just to solve this problem.
 The sequence of actions is approximately the following:
 - Create a UI layout in <a href="https://play.google.com/store/apps/details?id=com.crane.mockapp">MockApp</a>
 - Unload the layout (s) as a ZIP file and put it on your web-server
-- Add to the project android application dependency <code>compile 'com.crane:mockappcore:0.2'</code>
+- Add to the project android application dependency <code>compile 'com.crane:mockappcore:1.0'</code>
 - Download ZIP file with layouts from your web server
 - Import layout <code>ProjectServiceFactory.getInstance(context).importZip(Path to ZIP file);</code>
 - Inflate a view <code>LayoutInflater.inflate(context, "Cards", "LargeMedia_1_1", parent, true);</code>
