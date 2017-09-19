@@ -46,16 +46,15 @@ public class MainActivity extends AppCompatActivity {
 
     private void refresh(boolean download) {
         ViewGroup container = (ViewGroup) findViewById(R.id.container);
-        Object view = LayoutInflater.inflate(this, "Cards", "LargeMedia_1_1", container, true);
+        final Object view = LayoutInflater.inflate(this, "Cards", "LargeMedia_1_1", container, true);
         if (view != null) {
             Object buttonObject3 = Utils.findViewByViewIdPath(view, "FrameLayout_0/LinearLayout_2/ActionFlatButtons_Expand_4/Button_3");
             if (buttonObject3 != null) {
                 Button button = (Button) buttonObject3;
-                button.setText("DO IT");
                 button.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(MainActivity.this, "DO IT clicked", Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this, "on click!", Toast.LENGTH_LONG).show();
                     }
                 });
             }
@@ -107,6 +106,9 @@ public class MainActivity extends AppCompatActivity {
             InputStream stream = null;
             HttpsURLConnection connection = null;
             File result = new File(ProjectServiceFactory.getInstance(MainActivity.this).getLocalTmpFolder(), "Cards.zip");
+            if (result.exists())
+                return result;
+
             try {
                 connection = (HttpsURLConnection) url.openConnection();
                 connection.setReadTimeout(3000);

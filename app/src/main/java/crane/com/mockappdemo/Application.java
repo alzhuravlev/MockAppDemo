@@ -1,5 +1,7 @@
 package crane.com.mockappdemo;
 
+import android.os.Environment;
+
 import com.crane.mockapp.core.model.layouts.ProjectServiceFactory;
 
 import java.io.File;
@@ -13,7 +15,7 @@ public class Application extends android.app.Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        String path = new File(getApplicationContext().getFilesDir(), "MockApp").getPath();
+        String path = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), "MockAppDemo").getPath();
         ProjectServiceFactory.init(getApplicationContext(), path);
     }
 }
