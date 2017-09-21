@@ -1,7 +1,11 @@
 package crane.com.mockappdemo;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +23,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.net.ssl.HttpsURLConnection;
 
@@ -32,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         progressBar = (ProgressBar) findViewById(R.id.progress_bar);
-        refresh(true);
+        refreshWithCheck();
     }
 
     @Override
@@ -42,6 +48,36 @@ public class MainActivity extends AppCompatActivity {
             downloadTask = null;
         }
         super.onStop();
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        for (int grantResult : grantResults)
+            if (grantResult != PackageManager.PERMISSION_GRANTED)
+                return;
+        permissionGranted();
+    }
+
+    private void permissionGranted() {
+        refresh(true);
+    }
+
+    private void refreshWithCheck() {
+        List<String> permissionsToAsk = new ArrayList<>();
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED)
+                permissionsToAsk.add(Manifest.permission.READ_EXTERNAL_STORAGE);
+
+            if (checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED)
+                permissionsToAsk.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
+
+            if (permissionsToAsk.size() > 0)
+                requestPermissions(permissionsToAsk.toArray(new String[permissionsToAsk.size()]), 0);
+            else
+                permissionGranted();
+        } else
+            permissionGranted();
     }
 
     private void refresh(boolean download) {
@@ -75,17 +111,22 @@ public class MainActivity extends AppCompatActivity {
     private class DownloadTask extends AsyncTask<String, String, String> {
         @Override
         protected String doInBackground(String... params) {
+            File zipFile;
             try {
-                File zipFile = downloadUrl(new URL(params[0]));
-                if (zipFile != null) {
-                    ProjectServiceFactory.getInstance(MainActivity.this).deleteProjectByName("Cards");
-                    ProjectServiceFactory.getInstance(MainActivity.this).importZip(zipFile.getPath());
-                    return null;
-                }
+                zipFile = downloadUrl(new URL(params[0]));
             } catch (Exception e) {
                 e.printStackTrace();
+                return "Unable to download zip";
             }
-            return "Unable to download zip";
+
+            try {
+                ProjectServiceFactory.getInstance(MainActivity.this).deleteProjectByName("Cards");
+                ProjectServiceFactory.getInstance(MainActivity.this).importZip(zipFile.getPath());
+            } catch (Exception e) {
+                e.printStackTrace();
+                return "Unable to import project";
+            }
+            return null;
         }
 
         @Override
