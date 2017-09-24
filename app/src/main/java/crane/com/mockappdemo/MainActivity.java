@@ -13,9 +13,12 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.crane.mockapp.core.Utils;
+import com.crane.mockapp.core.MockApp;
+import com.crane.mockapp.core.model.layouts.LayoutDescriptor;
 import com.crane.mockapp.core.model.layouts.LayoutInflater;
+import com.crane.mockapp.core.model.layouts.ProjectService;
 import com.crane.mockapp.core.model.layouts.ProjectServiceFactory;
+import com.crane.mockapp.core.model.props.PropModel;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -82,9 +85,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void refresh(boolean download) {
         ViewGroup container = (ViewGroup) findViewById(R.id.container);
-        final Object view = LayoutInflater.inflate(this, "Cards", "LargeMedia_1_1", container, true);
+        LayoutDescriptor layoutDescriptor = ProjectServiceFactory.getInstance(this).loadLayoutByName("Cards", "LargeMedia_1_1");
+        final Object view = LayoutInflater.inflate(this, layoutDescriptor, container, true);
+//        final Object view = LayoutInflater.inflate(this, "Cards", "LargeMedia_1_1", container, true);
         if (view != null) {
-            Object buttonObject3 = Utils.findViewByViewIdPath(view, "FrameLayout_0/LinearLayout_2/ActionFlatButtons_Expand_4/Button_3");
+            Object buttonObject3 = MockApp.findViewByViewIdPath(view, "FrameLayout_0/LinearLayout_2/ActionFlatButtons_Expand_4/Button_3");
             if (buttonObject3 != null) {
                 Button button = (Button) buttonObject3;
                 button.setOnClickListener(new View.OnClickListener() {
