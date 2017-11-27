@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    buildToolsVersion "26.0.3"
     defaultConfig {
         applicationId "crane.com.mockappdemo"
         minSdkVersion 21
@@ -25,5 +25,5 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     testCompile 'junit:junit:4.12'
-    compile 'com.crane:mockappcore:1.7'
+    compile 'com.crane:mockappcore:1.8'
 }
