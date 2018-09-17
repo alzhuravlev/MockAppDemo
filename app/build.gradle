@@ -25,7 +25,9 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     implementation 'com.android.support:appcompat-v7:28.0.0-rc02'
-    implementation 'com.android.support:recyclerview-v7:28.0.0-rc02'
+    implementation 'com.android.support:design:28.0.0-rc02'
+    implementation "com.mikepenz:iconics-core:2.8.2@aar"
+    implementation 'com.mikepenz:google-material-typeface:2.2.0.3.original@aar'
     testImplementation 'junit:junit:4.12'
-    implementation 'com.crane:mockappcore:1.10'
+    implementation 'com.crane:mockappcore:1.12'
 }
