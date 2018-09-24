@@ -29,5 +29,5 @@ dependencies {
     implementation "com.mikepenz:iconics-core:2.8.2@aar"
     implementation 'com.mikepenz:google-material-typeface:2.2.0.3.original@aar'
     testImplementation 'junit:junit:4.12'
-    implementation 'com.crane:mockappcore:1.12'
+    implementation 'com.crane:mockappcore:1.13'
 }
