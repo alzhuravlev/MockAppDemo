@@ -27,7 +27,7 @@ dependencies {
     implementation 'com.shawnlin:number-picker:2.4.4'
     implementation "com.mikepenz:iconics-core:2.8.2@aar"
     implementation 'com.mikepenz:google-material-typeface:2.2.0.3.original@aar'
-    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'androidx.cardview:cardview:1.0.0'
 
