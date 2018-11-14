@@ -32,5 +32,5 @@ dependencies {
     implementation 'androidx.cardview:cardview:1.0.0'
 
     testImplementation 'junit:junit:4.12'
-    implementation 'com.crane:mockappcore:1.15'
+    implementation 'com.crane:mockappcore:1.16'
 }
