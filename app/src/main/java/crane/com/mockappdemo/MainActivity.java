@@ -85,7 +85,7 @@ public class MainActivity extends Activity {
     }
 
     private void refresh(boolean download) {
-        ViewGroup container = (ViewGroup) findViewById(R.id.container);
+        ViewGroup container = findViewById(R.id.container);
         LayoutDescriptor layoutDescriptor = ProjectServiceFactory.getInstance(this).loadLayoutByName("Cards", "LargeMedia_1_1");
         final Object view = LayoutInflater.inflate(this, layoutDescriptor, container, true);
 //        final Object view = LayoutInflater.inflate(this, "Cards", "LargeMedia_1_1", container, true);
