@@ -7,7 +7,7 @@ This is a demo of the MockApp library used to inflate layouts created with
 
 # Design capabilities
 
-![sss](/app/src/Capture.PNG)
+![sss](app/src/Capture.PNG)
 
 # Adding to Android Studio project
 
