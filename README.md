@@ -7,6 +7,8 @@ This is a demo of the MockApp library used to inflate layouts created with
 
 # Design capabilities
 
+![sss](app/src/Capture.PNG)
+
 # Adding to Android Studio project
 
 [ ![Download](https://api.bintray.com/packages/crane2002/maven/mockapp-core/images/download.svg?version=1.40.1) ](https://bintray.com/crane2002/maven/mockapp-core/1.40.1/link)
