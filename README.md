@@ -15,11 +15,24 @@ So why we couldn't experimenting with UI right in Android UI terms (Views)? Wnen
 Using this tool you can:
 1. Create Android UI **right in your phone (on the go!)**
 2. Share it with your customer as APK **right in your phone (on the go!)**
-3. Create <layout_name>.tags.txt file in your project folder and assign tags to views (or use @MockAppLayout and @MockAppView annotation see below for details). This way you create a "contract" your UI should follow to let you code work with it. 
-4. Inflate layout in different ways in your app (see below for details)
-5. Change your layout right in your phone and see results immediately in your app.
+3. Add MockApp library to your project (see below)
+4. Assign tags to views. Create <layout_name>.tags.txt file in your project folder and assign tags to views or use @MockAppLayout and @MockAppView annotations to automatically create .tags.txt file from Android Studio (see below for details). This way you create a "contract" your UI should follow to let you code work with it. 
+5. Inflate layout in different ways in your app (see below for details)
+6. Change your layout right in your phone and see results immediately in your app.
 
 # Design capabilities
+
+1. Copy-paste. You can copy from any project/layout and paste it into any layout. Views will be independent from where tou take it
+2. Include layout. Any changes in the source layout will be propogated into any place you use it
+3. Undo last operation
+4. SVG support
+5. Nine patch support
+6. Gradient/Image/Tile backgtound
+7. Material themes support
+8. Elevation/Outline (round corners)
+9. All major Android layouts: Frame, Linear, Toolbar, Scroll, Coordinator, AppBar, BottomSheet, NavigationDrawer and others
+10. Full screen supported
+11. Status bar coloring
 
 ![sss](app/src/Capture.PNG)
 
