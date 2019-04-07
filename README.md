@@ -25,7 +25,7 @@ Using this tool you can:
 
 # Adding to Android Studio project
 
-[ ![Download](https://api.bintray.com/packages/crane2002/maven/mockapp-core/images/download.svg?version=1.40.1) ](https://bintray.com/crane2002/maven/mockapp-core/1.40.1/link)
+[ ![Download](https://api.bintray.com/packages/crane2002/maven/mockapp-core/images/download.svg?_latestVersion) ](https://bintray.com/crane2002/maven/mockapp-core/_latestVersion/link)
 
 # Developed by
 Alexey Zhuravlev ([crane2002@gmail.com](mailto:crane2002@gmail.com))
