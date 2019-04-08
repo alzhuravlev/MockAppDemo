@@ -6,24 +6,23 @@ This is a demo of the MockApp library used to inflate layouts created with
 # Motivation
 
 Traditionaly UI prototypes are created using great tools like zeplin, figma etc. Developer takes that assets and trying
-to recreate UI using Android layout XML. It something changed cycle has to be repeated. We have two bunch of assets: in designing tool and Androdi XML that needs to be in sync. As we all know that the shorter the dev cycle the better.
+to recreate UI using Android layout XML. If something changed cycle has to be repeated. So we have two bunches of assets: produced by designing tool and Androdi XML that needs to be in keep sync. As we all know that the shorter the dev cycle the better.
 
 So why we couldn't experimenting with UI right in Android UI terms (Views)? Wnen design assets become real app assets, not just a nice pictures.
 
+The challenge of this tool is to have one bunch of assets for design and production code.
+
 # Usage
 
-Using this tool you can:
-1. Create Android UI **right in your phone (on the go!)**
-2. Share it with your customer as APK **right in your phone (on the go!)**
-3. Add MockApp library to your project (see below)
-4. Assign tags to views. Create <layout_name>.tags.txt file in your project folder and assign tags to views or use @MockAppLayout and @MockAppView annotations to automatically create .tags.txt file from Android Studio (see below for details). This way you create a "contract" your UI should follow to let you code work with it. 
-5. Inflate layout in different ways in your app (see below for details)
-6. Change your layout right in your phone and see results immediately in your app.
+General steps are:
+1. Design initial UI, quick sending results to the stakeholders as APK generated right from the [MockApp application](https://play.google.com/store/apps/details?id=com.crane.mockapp)
+2. Use excactly the same UI in real Android Studio project. Using [ MockApp Library ![MockApp Library](https://api.bintray.com/packages/crane2002/maven/mockapp-core/images/download.svg?_latestVersion) ](https://bintray.com/crane2002/maven/mockapp-core/_latestVersion/link) to **inflate layouts** and **bind views**
+3. Make changes to the UI and see results immediately in your app
 
-# Design capabilities
+# Design time
 
 1. Copy-paste. You can copy from any project/layout and paste it into any layout. Views will be independent from where tou take it
-2. Include layout. Any changes in the source layout will be propogated into any place you use it
+2. Reuse your layouts. Extract general parts of UI and reuse it. You have an ability to include layout into another layout. Any changes in the source layout will be propogated into any place you use it
 3. Undo last operation
 4. SVG support
 5. Nine patch support
@@ -33,10 +32,11 @@ Using this tool you can:
 9. All major Android layouts: Frame, Linear, Toolbar, Scroll, Coordinator, AppBar, BottomSheet, NavigationDrawer and others
 10. Full screen supported
 11. Status bar coloring
+12. And more...
 
 ![sss](app/src/Capture.PNG)
 
-# Adding to Android Studio project
+# Code time
 
 [ ![Download](https://api.bintray.com/packages/crane2002/maven/mockapp-core/images/download.svg?_latestVersion) ](https://bintray.com/crane2002/maven/mockapp-core/_latestVersion/link)
 
