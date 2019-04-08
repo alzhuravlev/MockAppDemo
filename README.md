@@ -34,10 +34,11 @@ General steps are:
 11. Status bar coloring
 12. And more...
 
-![sss](app/src/Capture.PNG)
+Some design technics are highlited here [MockApp. Design Time](https://medium.com/mock-app/mockapp-design-time-1aeecbcaf858)
 
 # Code time
 
+## Installation
 [ ![Download](https://api.bintray.com/packages/crane2002/maven/mockapp-core/images/download.svg?_latestVersion) ](https://bintray.com/crane2002/maven/mockapp-core/_latestVersion/link)
 
 # Developed by
