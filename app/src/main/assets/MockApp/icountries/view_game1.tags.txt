@@ -1,0 +1,12 @@
+questionText:TextView
+questionImage:ImageView
+option1Container:View
+option1Text:TextView
+option1Correct:View
+option1Incorrect:View
+option2Container:View
+option2Text:TextView
+option2Correct:View
+option2Incorrect:View
+answerCorrectText:TextView
+answerIncorrectText:TextView

@@ -1,0 +1,5 @@
+pagerPhotos:ViewPager
+sourceText:TextView
+dateText:TextView
+newsTitleText:TextView
+newsText:TextView

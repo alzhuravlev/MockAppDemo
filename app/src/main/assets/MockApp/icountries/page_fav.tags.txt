@@ -1,0 +1,7 @@
+titleText:TextView
+titleHintText:TextView
+gotoAnalyticsButton:View
+emptyStateContainer:View
+emptyStateText:TextView
+deselectAllText:TextView
+deselectAllButton:View

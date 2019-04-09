@@ -1,0 +1,10 @@
+shareButton:View
+titleText:TextView
+byCountryText:TextView
+byIndicatorText:TextView
+compareText:TextView
+filterButton:View
+filterText:TextView
+byCountryRecyclerView:RecyclerView
+byIndicatorRecyclerView:RecyclerView
+compareRecyclerView:RecyclerView

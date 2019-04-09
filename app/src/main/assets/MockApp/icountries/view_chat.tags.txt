@@ -1,0 +1,9 @@
+titleText:TextView
+attachFileButton:View
+sendButton:View
+messageEditText:EditText
+recyclerView:RecyclerView
+progress:View
+subscribeToChatButton:ImageView
+unsubscribeFromChatButton:ImageView
+subscribingProgress:View

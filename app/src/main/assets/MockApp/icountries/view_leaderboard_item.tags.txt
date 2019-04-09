@@ -1,0 +1,5 @@
+sequenceNumberText:TextView
+avatarImage:ImageView
+nameText:TextView
+nickText:TextView
+scoreTimeText:TextView

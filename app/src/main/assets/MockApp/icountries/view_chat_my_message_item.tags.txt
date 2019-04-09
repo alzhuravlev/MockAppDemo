@@ -1,0 +1,3 @@
+messageText:TextView
+messageImage:ImageView
+dateText:TextView

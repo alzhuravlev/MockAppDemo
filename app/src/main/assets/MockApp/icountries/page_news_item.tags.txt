@@ -1,0 +1,9 @@
+shortText:TextView
+sourceText:TextView
+fullText:TextView
+dateText:TextView
+countryImagesContainer:View
+countryImage1:ImageView
+countryImage2:ImageView
+countryImage3:ImageView
+thumbImage:ImageView

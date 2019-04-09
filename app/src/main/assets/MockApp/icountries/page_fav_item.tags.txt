@@ -1,0 +1,6 @@
+flagImage:ImageView
+titleText:TextView
+subtitleText:TextView
+analyticsButton:View
+analyticsCheckBox:CheckBox
+selectedBackgroundContainer:View

@@ -1,0 +1,2 @@
+nameText:TextView
+measureText:TextView

@@ -1,0 +1,4 @@
+valueText:TextView
+deltaPositiveText:TextView
+deltaNegativeText:TextView
+deltaZeroText:TextView

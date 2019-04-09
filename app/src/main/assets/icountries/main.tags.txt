@@ -1,6 +1,0 @@
-favButtonContainer:View!
-newsButtonContainer:View!
-homeButtonContainer:View!
-gameButtonContainer:View!
-settingsButtonContainer:View!
-contentContainer:ViewGroup!

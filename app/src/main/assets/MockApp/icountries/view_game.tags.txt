@@ -1,0 +1,7 @@
+titleText:TextView
+gameTitleText:TextView
+clockText:TextView
+clockContainer:View
+gameContainer:ViewGroup
+nextText:TextView
+gameProgressText:TextView

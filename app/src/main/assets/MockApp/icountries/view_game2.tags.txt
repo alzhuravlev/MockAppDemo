@@ -1,0 +1,17 @@
+questionText:TextView
+option1Container:View
+option1Text:TextView
+option1FlagImage:ImageView
+option1Image:ImageView
+option1CorrectAnswerText:TextView
+option1Correct:View
+option1Incorrect:View
+option2Container:View
+option2Text:TextView
+option2FlagImage:ImageView
+option2Image:ImageView
+option2CorrectAnswerText:TextView
+option2Correct:View
+option2Incorrect:View
+answerCorrectText:TextView
+answerIncorrectText:TextView

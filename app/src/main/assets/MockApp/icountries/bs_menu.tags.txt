@@ -1,0 +1,3 @@
+recyclerView:RecyclerView
+titleContainer:ViewGroup
+titleText:TextView

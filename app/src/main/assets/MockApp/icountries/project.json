@@ -1,0 +1,193 @@
+{
+  "layoutModels" : [ {
+    "id" : "2da6b279-d882-4b24-b788-bbabefb3b469",
+    "name" : "main",
+    "lastModified" : 1553032026964
+  }, {
+    "id" : "0905a0af-0d22-4ce0-8718-209edac044d1",
+    "name" : "page_fav",
+    "lastModified" : 1550574420935
+  }, {
+    "id" : "bcde1a55-87ea-409e-b6e7-575f089818ab",
+    "name" : "page_fav_item",
+    "lastModified" : 1554223602660
+  }, {
+    "id" : "7c195617-5aa7-493e-894f-0aa0a15ff64e",
+    "name" : "page_news",
+    "lastModified" : 1553461014461
+  }, {
+    "id" : "c78d1a3a-18a1-439b-97b5-b89a2f83a3fc",
+    "name" : "page_news_item",
+    "lastModified" : 1553516608687
+  }, {
+    "id" : "5f032354-10df-4694-9e1d-00061d4b63cb",
+    "name" : "page_home",
+    "lastModified" : 1551880628313
+  }, {
+    "id" : "f15f7e8f-2457-4814-a86f-22a615ac95f2",
+    "name" : "page_home_item",
+    "lastModified" : 1554223618636
+  }, {
+    "id" : "e594b5a8-8cd4-494e-a99f-90f2d77f4df6",
+    "name" : "page_game",
+    "lastModified" : 1553207114219
+  }, {
+    "id" : "cb73474e-9ce4-4b7f-a360-1ced4aea7aff",
+    "name" : "page_settings",
+    "lastModified" : 1550412719543
+  }, {
+    "id" : "a2a3a128-2c98-4a1d-997d-5bdeb0919401",
+    "name" : "view_country",
+    "lastModified" : 1553104079238
+  }, {
+    "id" : "f773269e-1004-413c-8c2d-a34eedfbb453",
+    "name" : "view_game1",
+    "lastModified" : 1552907756661
+  }, {
+    "id" : "7dfa0f7a-89e4-4ac3-9d77-06602780b4cc",
+    "name" : "view_profile",
+    "lastModified" : 1546703765515
+  }, {
+    "id" : "1d8dd054-7d85-4c2f-8395-d2c53fd66f9d",
+    "name" : "view_chat",
+    "lastModified" : 1552950059401
+  }, {
+    "id" : "80b07970-0dd3-4d71-8bf3-5ecd63b29a77",
+    "name" : "view_leaderboard",
+    "lastModified" : 1550397973652
+  }, {
+    "id" : "ddafef4c-8456-4a3f-9bde-8f5db2b95c28",
+    "name" : "view_analytics",
+    "lastModified" : 1550849890010
+  }, {
+    "id" : "b4b66cab-342f-465d-9bbb-31efe3dc4ce0",
+    "name" : "picker",
+    "lastModified" : 1549703773288
+  }, {
+    "id" : "5e2f8351-5f62-4821-93a2-6303942ad44b",
+    "name" : "switcher",
+    "lastModified" : 1547076182241
+  }, {
+    "id" : "8645d2a6-c6a1-4140-b066-cecd797be880",
+    "name" : "game_title",
+    "lastModified" : 1549563317912
+  }, {
+    "id" : "c8bbb093-d44b-4aa6-a651-5fcf65074130",
+    "name" : "game_next",
+    "lastModified" : 1547153154798
+  }, {
+    "id" : "0d242605-604b-45ae-b136-0d32d33e80e1",
+    "name" : "view_game2",
+    "lastModified" : 1552907729720
+  }, {
+    "id" : "8620d56c-d2d8-4f2f-91b0-a640bb26e8f8",
+    "name" : "game1_answer",
+    "lastModified" : 1547163354686
+  }, {
+    "id" : "f3d6cc98-373a-4d5a-9465-1d3fbb352156",
+    "name" : "game2_answer",
+    "lastModified" : 1551617740715
+  }, {
+    "id" : "d6ce0e56-a801-45aa-9695-81f829348694",
+    "name" : "switcher_three",
+    "lastModified" : 1550829054448
+  }, {
+    "id" : "bcb9ca4d-d349-4b29-aacb-d3e7e8d5b605",
+    "name" : "demo",
+    "lastModified" : 1547324763788
+  }, {
+    "id" : "e8a0f835-aa62-4816-b132-b64aea73d1fe",
+    "name" : "view_updating",
+    "lastModified" : 1550404527106
+  }, {
+    "id" : "e46b6c1f-8898-4f06-bb9f-a965015d6a5f",
+    "name" : "bs",
+    "lastModified" : 1553101754813
+  }, {
+    "id" : "88a0cfc7-f72f-4414-9080-e5b47d6ded5f",
+    "name" : "bs_menu",
+    "lastModified" : 1549566969897
+  }, {
+    "id" : "43a066b4-2d6e-469b-bd81-120b9b7bb20c",
+    "name" : "bs_menu_item",
+    "lastModified" : 1550752905425
+  }, {
+    "id" : "5e5d07e1-3231-43cd-bb2f-e163e7901b46",
+    "name" : "view_data_title_item",
+    "lastModified" : 1550671164270
+  }, {
+    "id" : "e1aa9095-5cbc-4dde-a892-36cd1dea759c",
+    "name" : "view_photo_item",
+    "lastModified" : 1551870133056
+  }, {
+    "id" : "87355168-6d3c-4bbf-bfe2-b6c99972696a",
+    "name" : "view_data_value_item",
+    "lastModified" : 1550671328130
+  }, {
+    "id" : "36fa6d20-7d4e-4fac-bca2-8edc8fc98754",
+    "name" : "view_game",
+    "lastModified" : 1549565913250
+  }, {
+    "id" : "2542a15f-95c0-475d-9448-0c594889419a",
+    "name" : "view_game_win",
+    "lastModified" : 1553203578013
+  }, {
+    "id" : "c2a79b8d-abd7-4158-bc28-af1d5eedf89b",
+    "name" : "view_game_fail",
+    "lastModified" : 1549647648178
+  }, {
+    "id" : "0dd44b64-c1c2-4824-ab6e-a148ab182c3a",
+    "name" : "button",
+    "lastModified" : 1549657992028
+  }, {
+    "id" : "6312052d-d487-49b5-af08-ff2ba90f46da",
+    "name" : "view_analytics_value_item",
+    "lastModified" : 1550847101777
+  }, {
+    "id" : "e9955340-6eab-41b9-8579-bbb98a1a8c38",
+    "name" : "view_analytics_indicator_item",
+    "lastModified" : 1550847082011
+  }, {
+    "id" : "5d8f257f-37f5-4eb9-9e6d-254a193ed02a",
+    "name" : "view_analytics_year_item",
+    "lastModified" : 1550847114727
+  }, {
+    "id" : "6c8272ee-1397-4ef2-b5ee-bf1037bada5b",
+    "name" : "view_analytics_country_item",
+    "lastModified" : 1550847150463
+  }, {
+    "id" : "2f37489d-4ba2-407d-887c-24e8854574e6",
+    "name" : "view_leaderboard_item",
+    "lastModified" : 1550263566079
+  }, {
+    "id" : "8b22bbe4-243e-40a7-8b9d-805d02103d2e",
+    "name" : "view_town",
+    "lastModified" : 1552839072779
+  }, {
+    "id" : "d4c4da49-f598-4d71-9cf7-b92d9ef1ccb9",
+    "name" : "view_town_item",
+    "lastModified" : 1551603434154
+  }, {
+    "id" : "9dc72567-5237-4be4-8904-a1876675f10e",
+    "name" : "view_chat_message_item",
+    "lastModified" : 1553080157105
+  }, {
+    "id" : "c5912a9a-1ca2-4412-84ff-d220d482278c",
+    "name" : "view_chat_my_message_item",
+    "lastModified" : 1553080103554
+  }, {
+    "id" : "f218d2c8-f9ea-4512-9764-4519954567ca",
+    "name" : "view_news",
+    "lastModified" : 1553075544415
+  }, {
+    "id" : "23b72d3b-c98f-4787-bdef-17dfd1a32714",
+    "name" : "view_about",
+    "lastModified" : 1550767799772
+  }, {
+    "id" : "d60c5824-8793-4951-9733-b11f44052651",
+    "name" : "view_load_more_item",
+    "lastModified" : 1552831455647
+  } ],
+  "mainLayoutId" : null,
+  "id" : "0d3fcd7a-86b4-4af8-a669-6ab33eec65c6"
+}

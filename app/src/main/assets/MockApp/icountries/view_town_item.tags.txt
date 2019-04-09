@@ -1,0 +1,3 @@
+photoImage:ImageView
+nameText:TextView
+populationText:TextView

@@ -1,0 +1,4 @@
+text1:TextView
+text2:TextView
+text3:TextView
+text4:TextView

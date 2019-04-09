@@ -1,0 +1,9 @@
+sequenceNumberText:TextView
+flagImage:ImageView
+nameText:TextView
+capitalText:TextView
+indicatorValueText:TextView
+analyticsButton:View
+analyticsCheckBox:CheckBox
+selectedBackgroundContainer:View
+fav:View

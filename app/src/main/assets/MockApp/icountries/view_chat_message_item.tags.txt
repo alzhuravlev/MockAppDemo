@@ -1,0 +1,5 @@
+avatarImage:ImageView
+nameText:TextView
+messageText:TextView
+messageImage:ImageView
+dateText:TextView

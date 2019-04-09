@@ -1,0 +1,3 @@
+image:ImageView
+title:TextView
+imageContainer:View

@@ -1,0 +1,13 @@
+favButtonContainer:View
+newsButtonContainer:View
+homeButtonContainer:View
+gameButtonContainer:View
+settingsButtonContainer:View
+buttonsContainer:View
+buttonsSpaceHolderContainer:View
+contentContainer:ViewGroup
+favText:TextView
+newsText:TextView
+homeText:TextView
+gameText:TextView
+settingsText:TextView

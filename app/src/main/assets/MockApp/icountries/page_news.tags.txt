@@ -1,0 +1,8 @@
+titleText:TextView
+gameTitleText:TextView
+progress:View
+emptyStateContainer:View
+emptyStateText:TextView
+errorStateContainer:View
+errorStateText:TextView
+swipeRefreshLayout:SwipeRefreshLayout

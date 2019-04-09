@@ -1,0 +1,3 @@
+failedText:TextView
+failedFullText:TextView
+tryAgainText:TextView

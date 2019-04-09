@@ -1,0 +1,6 @@
+progress:ProgressBar
+progressText:TextView
+retryButton:View
+versionText:TextView
+worldImage:ImageView
+searchImage:ImageView

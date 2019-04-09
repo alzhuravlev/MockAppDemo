@@ -1,0 +1,6 @@
+winText:TextView
+userNameText:TextView
+scoreText:TextView
+shareText:TextView
+nextLevelText:TextView
+viewToRenderShare:View
