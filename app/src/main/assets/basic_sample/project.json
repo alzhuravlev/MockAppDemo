@@ -1,0 +1,77 @@
+{
+  "layoutModels" : [ {
+    "id" : "07af62d9-9a93-4bbc-9638-b9e1ed0de46b",
+    "name" : "FrameLayout",
+    "lastModified" : 1552657722488
+  }, {
+    "id" : "d4cdec41-b063-4466-93d2-45a686ad7d5a",
+    "name" : "LinearLayout",
+    "lastModified" : 1553418386021
+  }, {
+    "id" : "7c5b3a91-62ca-488b-be3b-e47e91cab91d",
+    "name" : "Toolbar2",
+    "lastModified" : 1553418352024
+  }, {
+    "id" : "dbbeea7b-c4ed-4919-9c16-d75d75006f4c",
+    "name" : "RecyclerView",
+    "lastModified" : 1553419371852
+  }, {
+    "id" : "f608700e-b888-46af-932d-665f68e2104b",
+    "name" : "RecyclerViewItem",
+    "lastModified" : 1553418949602
+  }, {
+    "id" : "f35a109e-830e-4732-97c7-3e6c4bccacb8",
+    "name" : "TabLayout",
+    "lastModified" : 1553419791989
+  }, {
+    "id" : "1d0a091d-809e-49ac-a518-baa721a8a886",
+    "name" : "ScrollView",
+    "lastModified" : 1553421104551
+  }, {
+    "id" : "cafeb2ce-88fa-43e5-bff3-6ce0344f4986",
+    "name" : "Colors",
+    "lastModified" : 1553426180501
+  }, {
+    "id" : "cc28e54a-ab81-44f4-a70b-dd7ae9dd0fd1",
+    "name" : "RoundCorners",
+    "lastModified" : 1553427143748
+  }, {
+    "id" : "a1fcdee8-3417-4518-88b2-7fc3d55c4f0c",
+    "name" : "Ripple",
+    "lastModified" : 1553426848988
+  }, {
+    "id" : "f626e3ec-da47-42f7-aa24-0d61a37d8d8f",
+    "name" : "Tile",
+    "lastModified" : 1553427710193
+  }, {
+    "id" : "0d56c8b6-3ac3-4f05-a0eb-b5b4f74d5224",
+    "name" : "Gradient",
+    "lastModified" : 1553427918607
+  }, {
+    "id" : "f7edae78-e5e7-4571-a2f3-ab50519f45cc",
+    "name" : "Nine",
+    "lastModified" : 1553428775212
+  }, {
+    "id" : "8a977f33-8292-4017-bcbd-3621ebee9730",
+    "name" : "BSMenu",
+    "lastModified" : 1553430654954
+  }, {
+    "id" : "f08f122a-dba8-49ba-94bf-9df79b47d986",
+    "name" : "BSMenu_bs",
+    "lastModified" : 1553430442469
+  }, {
+    "id" : "a349e354-6727-4431-88a2-15b0318fed8e",
+    "name" : "BSMenu_bs_item",
+    "lastModified" : 1553430351153
+  }, {
+    "id" : "98440b8e-8219-4469-a934-17e96338c3f9",
+    "name" : "AppBarLayout",
+    "lastModified" : 1553435553301
+  }, {
+    "id" : "217bb7cc-45a4-4d11-962c-e83db9dfaf0b",
+    "name" : "FullScreen",
+    "lastModified" : 1553437326980
+  } ],
+  "mainLayoutId" : null,
+  "id" : "5912a867-049f-4b2f-8f41-bd0b249295a7"
+}
