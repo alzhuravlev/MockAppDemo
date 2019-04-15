@@ -1,0 +1,13 @@
+{
+  "layoutModels" : [ {
+    "id" : "0d466efe-3e61-4c2a-a2e9-b6fea09aa66c",
+    "name" : "main",
+    "lastModified" : 1555265292382
+  }, {
+    "id" : "63de9c8f-87e3-49c3-b8a4-5194a4bae707",
+    "name" : "main_item",
+    "lastModified" : 1555265304634
+  } ],
+  "mainLayoutId" : "0d466efe-3e61-4c2a-a2e9-b6fea09aa66c",
+  "id" : "6ecbccff-5c72-4aa7-aa7d-7ff6c0716f60"
+}
