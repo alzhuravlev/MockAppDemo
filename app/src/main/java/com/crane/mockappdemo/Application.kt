@@ -13,7 +13,7 @@ class Application : Application() {
         // Optionally you can override location of the local project's storage.
         // Default is /sdcard/Documents/MockApp
         val path =
-            File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), "MockAppDemo").path
+            File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), "MockApp").path
         ProjectServiceFactory.init(this, path)
     }
 }
