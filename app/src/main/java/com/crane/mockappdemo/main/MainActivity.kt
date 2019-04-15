@@ -21,20 +21,8 @@ class MainActivity : MockAppActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-//        window.decorView.postDelayed({
-        val lp = recyclerView.layoutParams
-        if (lp is CoordinatorLayout.LayoutParams) {
-            val behavior = lp.behavior
-            if (behavior is AppBarLayout.ScrollingViewBehavior) {
-                behavior.overlayTop = 70
-                recyclerView.layoutParams = lp
-                val decoration = recyclerView.getItemDecorationAt(0)
-                if (decoration is PaddingItemDecoration) {
-//                        decoration.paddingTopExtra = appBarLayout.height
-//                        recyclerView.invalidateItemDecorations()
-                }
-            }
-        }
-//        }, 1000)
+        window.decorView.postDelayed({
+            appBarLayout.getChildAt(0).minimumHeight = appBarLayout.getChildAt(0).height
+        }, 10)
     }
 }
