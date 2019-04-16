@@ -38,8 +38,46 @@ Some design technics are highlited here [MockApp. Design Time](https://medium.co
 
 # Code time
 
-## Installation
+## Dependencies
 [ ![Download](https://api.bintray.com/packages/crane2002/maven/mockapp-core/images/download.svg?_latestVersion) ](https://bintray.com/crane2002/maven/mockapp-core/_latestVersion/link)
+
+Add dependencies
+```gradle
+    // required
+    implementation 'com.crane:mockappcore:1.40.5'
+
+    // optional: for binding views using @MockAppLayout and @MockAppView (see below for details)
+    implementation 'com.crane:mockappannotations:1.40.5'
+    kapt 'com.crane:mockappprocessor:1.40.5'
+```
+
+## Initialization
+
+This step is optional. By default projects are searched in following path:
+* local projects in internal storage of the device: /sdcard/Documents/MockApp
+* internal projects in **assets** folder of the app: /assets/MockApp
+
+You can change local ptoject path in this way:
+
+```kotlin
+class MyApplication : Application() {
+    override fun onCreate() {
+        super.onCreate()
+
+        // Optionally you can override location of the local project's storage.
+        // Default is /sdcard/Documents/MockApp
+        val path =
+            File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), "MyMockAppFolder").path
+        ProjectServiceFactory.init(this, path)
+    }
+}
+```
+
+## Inflate layout using MockAppActivity
+## Inflate layout using MockAppFragment
+## Inflate layout in general
+## Inflate RecyclerView's items
+## Binding views
 
 # Developed by
 Alexey Zhuravlev ([crane2002@gmail.com](mailto:crane2002@gmail.com))
