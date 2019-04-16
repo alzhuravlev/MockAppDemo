@@ -46,8 +46,8 @@ Add dependencies
     // required
     implementation 'com.crane:mockappcore:1.40.5'
 
-    // optional: for binding views using @MockAppLayout and @MockAppView (see below for details)
-    implementation 'com.crane:mockappannotations:1.40.5'
+    // optional: for auto build *.tags.txt file from views  
+    // annotated with @MockAppLayout and @MockAppView
     kapt 'com.crane:mockappprocessor:1.40.5'
 ```
 
@@ -78,7 +78,9 @@ class MyApplication : Application() {
 
 `MockAppActivity` do a lot of useful things: coloring status and nav bars, controls full screen mode, inflate bottom sheet and nav drawer for you, apply themes. At this moment it is very recommend to inherit your activity from it. But you still able to inflate layout without it with several lines of code (see Inflate layout in general).
 
-### Sample 1. [Activity1.kt](app/src/main/java/com/crane/mockappdemo/sample1/Activity1.kt)
+### Sample 1.
+
+#### [Activity1.kt](app/src/main/java/com/crane/mockappdemo/sample1/Activity1.kt)
 
 If you know project/layout name in advance you can use annotation `@MockAppLayout`
 
