@@ -90,7 +90,7 @@ class Activity1 : MockAppActivity() {
 }
 ```
 
-Just start `Activity1` and you get ready to use UI.
+Just start `Activity1` and you get ready to use UI loaded from [view_country.json](app/src/main/assets/MockApp/icountries/view_country.json)
 
 
 
