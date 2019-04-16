@@ -53,7 +53,7 @@ dependencies {
 
     implementation 'com.crane:mockappcore:1.40.5'
 
-    // optional: for binding views using @MockAppLayout and @MockAppView
-    implementation 'com.crane:mockappannotations:1.40.5'
+    // optional: for auto build *.tags.txt file from views
+    // annotated with @MockAppLayout and @MockAppView
     kapt 'com.crane:mockappprocessor:1.40.5'
 }
