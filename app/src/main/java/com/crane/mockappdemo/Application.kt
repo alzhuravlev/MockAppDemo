@@ -6,7 +6,6 @@ import com.crane.mockapp.core.model.layouts.ProjectServiceFactory
 import java.io.File
 
 class Application : Application() {
-
     override fun onCreate() {
         super.onCreate()
 
