@@ -57,6 +57,8 @@ This step is optional. By default projects are searched in following path:
 * local projects in internal storage of the device: /sdcard/Documents/MockApp
 * internal projects in **assets** folder of the app: /assets/MockApp
 
+You can get very fast dev cycle if you inflate layouts from internal storage. But production app get layouts from assets folder.
+
 You can change local ptoject path in this way:
 
 ```kotlin
@@ -72,8 +74,26 @@ class MyApplication : Application() {
     }
 }
 ```
-
 ## Inflate layout using MockAppActivity
+
+`MockAppActivity` do a lot of useful things: coloring status and nav bars, controls full screen mode, inflate bottom sheet and nav drawer for you, apply themes. At this moment it is very recommend to inherit your activity from it. But you still able to inflate layout without it with several lines of code (see Inflate layout in general).
+
+### Sample 1. [Activity1.kt](app/src/main/java/com/crane/mockappdemo/sample1/Activity1.kt)
+
+If you know project/layout name in advance you can use annotation `@MockAppLayout`
+
+```kotlin
+@MockAppLayout(projectName = "icountries", layoutName = "view_country")
+class Activity1 : MockAppActivity() {
+}
+```
+
+Just start `Activity1` and you get ready to use UI.
+
+
+
+### Sample 2.
+
 ## Inflate layout using MockAppFragment
 ## Inflate layout in general
 ## Inflate RecyclerView's items
