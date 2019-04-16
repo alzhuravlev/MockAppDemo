@@ -1,8 +1,8 @@
-package crane.com.mockappdemo.main
+package com.crane.mockappdemo.main
 
 import android.app.Application
 import androidx.appcompat.app.AppCompatActivity
-import crane.com.mockappdemo.BaseViewModel
+import com.crane.mockappdemo.BaseViewModel
 
 data class MainItem(
     val activity: Class<out AppCompatActivity>,

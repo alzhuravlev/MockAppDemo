@@ -1,4 +1,4 @@
-package crane.com.mockappdemo.main
+package com.crane.mockappdemo.main
 
 import android.content.Context
 import android.view.View

@@ -1,4 +1,4 @@
-package crane.com.mockappdemo
+package com.crane.mockappdemo
 
 import android.app.Application
 import android.content.Context

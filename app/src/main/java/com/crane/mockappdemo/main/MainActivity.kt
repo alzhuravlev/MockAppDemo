@@ -1,4 +1,4 @@
-package crane.com.mockappdemo.main
+package com.crane.mockappdemo.main
 
 import android.os.Bundle
 import androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -22,7 +22,7 @@ class MainActivity : MockAppActivity() {
         super.onCreate(savedInstanceState)
 
         window.decorView.postDelayed({
-            appBarLayout.getChildAt(0).minimumHeight = appBarLayout.getChildAt(0).height
+//            appBarLayout.getChildAt(0).minimumHeight = appBarLayout.getChildAt(0).height
         }, 10)
     }
 }
