@@ -214,16 +214,55 @@ than CustomTag will be `titleText:TextView`
 
 Where CustomTags are come from? 
 Each view in the hierarchy of the layout has property CustomTag. Just assign some value and use it for binding later.
-If file `<layout_name>.tags.txt` exists than list of custom tags from this file available as dropdown. To automatically generate this file from classes annotated with `@MockAppLayout` and `@MockAppView` add `annotation processor` to your dependencies:
+If file `<layout_name>.tags.txt` exists than list of custom tags from this file available as dropdown. To automatically generate this file from classes annotated with `@MockAppLayout` and `@MockAppView` add `annotation processor` to your `build.gradle` (app level):
 
 ```gradle
+
+def copyToAssets() {
+    copy {
+        from 'build/generated/source/kapt/debug/main/assets/MockApp'
+        into "src/main/assets/MockApp"
+    }
+}
+
+afterEvaluate { project ->
+    project.tasks.compileDebugSources {
+        doLast {
+            copyToAssets()
+        }
+    }
+}
+
+dependencies {
+
+...
+
 implementation 'com.crane:mockappcore:1.40.5'
 **kapt 'com.crane:mockappprocessor:1.40.5'**
+
+...
+
+}
 ```
 
+And after build \*.tags.txt files will be copied into `src/main/assets/MockApp` folder
 
+Hint. To make dev cycle easier you can copy all you layout from/to your device
 
+Copy to device
+```bash
+adb shell rm -rf /sdcard/Documents/MockApp
+adb push app/src/main/assets/MockApp /sdcard/Documents
+```
 
+After you modify layouts pull it back into `assets` folder using
+
+```bash
+adb pull /sdcard/Documents/MockApp app/src/main/assets
+rmdir /S /Q app\src\main\assets\MockApp\tmp
+```
+
+Run these commands from root of your Android Studio project.
 
 # Developed by
 Alexey Zhuravlev ([crane2002@gmail.com](mailto:crane2002@gmail.com))
