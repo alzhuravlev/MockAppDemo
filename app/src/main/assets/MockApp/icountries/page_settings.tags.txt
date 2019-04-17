@@ -1,16 +1,3 @@
 titleText:TextView
 aboutText:TextView
 aboutButton:View
-feedbackText:TextView
-feedbackButton:View
-shareText:TextView
-shareButton:View
-rateText:TextView
-rateButton:View
-avatarButton:View
-avatarImage:ImageView
-nameContainer:View
-nameText:TextView
-emailText:TextView
-providerText:TextView
-linkWithGoogleButton:TextView
