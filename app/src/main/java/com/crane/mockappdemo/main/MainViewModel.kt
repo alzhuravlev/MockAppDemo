@@ -54,6 +54,13 @@ class MainViewModel(application: Application) : BaseViewModel(application) {
             MainItem(
                 RecyclerView5::class.java,
                 """
+                    This sample illustrates how to create ready-to-use ViewHolder
+                """.trimIndent()
+            ),
+            MainItem(
+                BindViews6::class.java,
+                """
+                    This sample illustrates how to bind views (see Binding Views in the doc)
                 """.trimIndent()
             )
         )
