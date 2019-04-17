@@ -182,11 +182,10 @@ and in onCreateViewHolder use MockApp.createViewHolder to inflate item's layout 
     }
 ```
 
-Sometimes we need to know the point where all views are binded. Implement `MockAppViewBinder` interface in the ViewHolder 
-and override `onViewsReady` to set event handlers for instance
+Sometimes we need to know the point where all views are binded. To set event handlers for instance. Just implement `MockAppViewBinder` interface in the `ViewHolder` and override `onViewsReady`
 
 ```kotlin
-@MockAppLayout(projectName = "icountries", layoutName = "page_fav_item")
+    @MockAppLayout(projectName = "icountries", layoutName = "page_fav_item")
     inner class MyViewHolder1(itemView: View) : MyViewHolder(itemView), MockAppViewBinder {
 
         @MockAppView
@@ -203,6 +202,28 @@ and override `onViewsReady` to set event handlers for instance
 ```
 
 ## Binding Views
+
+You have several options to bind views to member fileds of your class.
+1. Automatic binding via `@MockAppView`
+2. Manual binding via `MockApp.findViewWithCustomTag`
+
+`MockAppActivity` and `MockAppFragment` has method `bindMockAppLayout`. This method just invoke `MockApp.bindViews` which do all auto binding staff. Binding process starts right after view is inflated, before it attached to the window. So you can access to views references as early as possible. The rules are simple:
+1. If `@MockAppView` provides CustomTag, `MockApp.findViewWithCustomTag` is invoked with this value
+2. If not CustomTag gerated from signature of the view's reference. i.e. if field is `lateinit var titleText: TextView` 
+than CustomTag will be `titleText:TextView`
+
+Where CustomTags are come from? 
+Each view in the hierarchy of the layout has property CustomTag. Just assign some value and use it for binding later.
+If file `<layout_name>.tags.txt` exists than list of custom tags from this file available as dropdown. To automatically generate this file from classes annotated with `@MockAppLayout` and `@MockAppView` add `annotation processor` to your dependencies:
+
+```gradle
+implementation 'com.crane:mockappcore:1.40.5'
+**kapt 'com.crane:mockappprocessor:1.40.5'**
+```
+
+
+
+
 
 # Developed by
 Alexey Zhuravlev ([crane2002@gmail.com](mailto:crane2002@gmail.com))
