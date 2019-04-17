@@ -27,4 +27,8 @@ class Activity2 : MockAppActivity() {
     override fun getLayoutName(): String? {
         return "page_home"
     }
+
+    override fun inflateDefaultLayout() {
+        // if for any reason layout count not be inflated this method will be invoked
+    }
 }
