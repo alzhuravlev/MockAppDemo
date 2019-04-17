@@ -46,7 +46,7 @@ Add dependencies
     // required
     implementation 'com.crane:mockappcore:1.40.5'
 
-    // optional: for auto build *.tags.txt file from views  
+    // optional: for auto build *.tags.txt file from classes
     // annotated with @MockAppLayout and @MockAppView
     kapt 'com.crane:mockappprocessor:1.40.5'
 ```
@@ -78,9 +78,7 @@ class MyApplication : Application() {
 
 `MockAppActivity` do a lot of useful things: coloring status and nav bars, controls full screen mode, inflate bottom sheet and nav drawer for you, apply themes. At this moment it is very recommend to inherit your activity from it. But you still able to inflate layout without it with several lines of code (see Inflate layout in general).
 
-### Sample 1.
-
-#### [Activity1.kt](app/src/main/java/com/crane/mockappdemo/sample1/Activity1.kt)
+### [Activity1.kt](app/src/main/java/com/crane/mockappdemo/sample1/Activity1.kt)
 
 If you know project/layout name in advance you can use annotation `@MockAppLayout`
 
@@ -92,14 +90,67 @@ class Activity1 : MockAppActivity() {
 
 Just start `Activity1` and you get ready to use UI loaded from [view_country.json](app/src/main/assets/MockApp/icountries/view_country.json)
 
+OR 
 
+if your app has READ_EXTERNAL_STORAGE permission and file `/sdcard/Documents/MockApp/icountries/view_country.json` exists then layout will be inflated from this location
 
-### Sample 2.
+### [Activity2.kt](app/src/main/java/com/crane/mockappdemo/sample1/Activity2.kt)
+
+To let your code resolve what project/layout to infate in runtime just override (`getProjectId` OR `getProjectName`) AND (`getLayoutId` OR `getLayoutName`)
+
+```kotlin
+    /**
+     * You can override getProjectId or getProjectName to pass a Project to find a layout in
+     * @see com.crane.mockapp.core.MockApp.resolveLayoutDescriptor
+     */
+    override fun getProjectId(): String? {
+        return null
+    }
+
+    override fun getProjectName(): String? {
+        return "icountries"
+    }
+
+    /**
+     * You can override getLayoutId or getLayoutName to find a layout to inflate
+     * @see com.crane.mockapp.core.MockApp.resolveLayoutDescriptor
+     */
+    override fun getLayoutId(): String? {
+        return null
+    }
+
+    override fun getLayoutName(): String? {
+        return "page_home"
+    }
+```
+
+If layout could not be inflated for any reason you have a chance to take care of it overriding `inflateDefaultLayout`
+
+```kotlin
+    override fun inflateDefaultLayout() {
+        // if for any reason layout count not be inflated this method will be invoked
+    }
+```
 
 ## Inflate layout using MockAppFragment
+
+### [Fragment3.kt](app/src/main/java/com/crane/mockappdemo/sample1/Fragment3.kt)
+
+Just like extending MockAppActivity you have two options:
+* use @MockAppLayout 
+* or override getProjectId/getProjectName and getLayoutId/getLayoutName
+
 ## Inflate layout in general
+
+### [GeneralCase4.kt](app/src/main/java/com/crane/mockappdemo/sample1/GeneralCase4.kt)
+
+Inflating a layout in general case include 3 steps:
+1. Load LayoutDescriptor from \*.json file located somewhere (or just a string)
+2. Inflate a layout to get a View using variation of LayoutInflater.inflate...
+3. Bind views from inflated layout (see Binding Views for more details)
+
 ## Inflate RecyclerView's items
-## Binding views
+## Binding Views
 
 # Developed by
 Alexey Zhuravlev ([crane2002@gmail.com](mailto:crane2002@gmail.com))
