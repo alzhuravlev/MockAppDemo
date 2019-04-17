@@ -17,16 +17,12 @@ class MainViewModel(application: Application) : BaseViewModel(application) {
 
     companion object {
 
-        private val _data = listOf<MainItem>(
+        private val _data = listOf(
             MainItem(
                 Activity1::class.java,
                 """
-                    `MockAppActivity` do a lot of useful things: coloring status and nav bars,
-                    controls full screen mode, inflate bottom sheet and nav drawer for you,
-                    apply themes. At this moment it is very recommend to inherit your activity from it.
-                    But you still able to inflate layout without it with several lines of code (see Inflate layout in general).
-
-                    If you know project/layout name in advance you can use annotation `@MockAppLayout`
+                    This sample illustrates how inflate Activity's contentView using @MockAppLayout annotation.
+                    This is easiest way to inflate in you know projectName/layoutName in advance
                 """.trimIndent()
             ),
             MainItem(
@@ -50,9 +46,14 @@ class MainViewModel(application: Application) : BaseViewModel(application) {
                 GeneralCase4::class.java,
                 """
                     Inflating a layout in general case include 3 steps:
-                    1. Load LayoutDescriptor from \*.json file located somewhere (or just a string)
+                    1. Load LayoutDescriptor from *.json file located somewhere (or just a string)
                     2. Inflate a layout to get a View using variation of LayoutInflater.inflate...
                     3. Bind views from inflated layout (see Binding Views for more details)
+                """.trimIndent()
+            ),
+            MainItem(
+                RecyclerView5::class.java,
+                """
                 """.trimIndent()
             )
         )

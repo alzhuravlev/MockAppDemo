@@ -28,6 +28,7 @@
         <activity android:name=".sample1.Activity2"/>
         <activity android:name=".sample1.Fragment3"/>
         <activity android:name=".sample1.GeneralCase4"/>
+        <activity android:name=".sample1.RecyclerView5"/>
 
     </application>
 

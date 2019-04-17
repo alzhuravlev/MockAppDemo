@@ -1,2 +1,3 @@
 shortText:TextView
+sourceText:TextView
 fullText:TextView
