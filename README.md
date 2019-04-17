@@ -96,7 +96,7 @@ if your app has READ_EXTERNAL_STORAGE permission and file `/sdcard/Documents/Moc
 
 ### [Activity2.kt](app/src/main/java/com/crane/mockappdemo/sample1/Activity2.kt)
 
-To let your code resolve what project/layout to infate in runtime just override `getProjectId` or `getProjectName` and 'getLayoutId' or `getLayoutName`
+To let your code resolve what project/layout to infate in runtime just override (`getProjectId` OR `getProjectName`) AND (`getLayoutId` OR `getLayoutName`)
 
 ```kotlin
     /**
@@ -132,8 +132,13 @@ If layout could not be inflated for any reason you have a chance to take care of
     }
 ```
 
-
 ## Inflate layout using MockAppFragment
+
+### [Fragment3.kt](app/src/main/java/com/crane/mockappdemo/sample1/Fragment3.kt)
+
+Just like extending MockAppActivity you have options to use
+@MockAppLayout or override getProjectId/getProjectName and getLayoutId/getLayoutName
+
 ## Inflate layout in general
 ## Inflate RecyclerView's items
 ## Binding views
