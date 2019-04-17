@@ -196,7 +196,7 @@ Sometimes we need to know the point where all views are binded. To set event han
 
         override fun onViewsReady() {
             subtitleText.setOnClickListener {
-                Toast.makeText(context, "What do you want?", Toast.LENGTH_LONG)
+                Toast.makeText(context, "What do you want?", Toast.LENGTH_LONG).show()
             }
         }
 ```
