@@ -1,2 +1,2 @@
 recyclerView:RecyclerView
-appBarLayout:AppBarLayout
+viewOnGitHubButton:View

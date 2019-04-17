@@ -2,15 +2,11 @@
   "layoutModels" : [ {
     "id" : "0d466efe-3e61-4c2a-a2e9-b6fea09aa66c",
     "name" : "main",
-    "lastModified" : 1555507882387
+    "lastModified" : 1555530667515
   }, {
     "id" : "63de9c8f-87e3-49c3-b8a4-5194a4bae707",
     "name" : "main_item",
     "lastModified" : 1555334724239
-  }, {
-    "id" : "a434a28d-a6c8-4eb8-b7e4-ebb2889733cc",
-    "name" : "Layout",
-    "lastModified" : 1555432284805
   } ],
   "mainLayoutId" : "0d466efe-3e61-4c2a-a2e9-b6fea09aa66c",
   "id" : "6ecbccff-5c72-4aa7-aa7d-7ff6c0716f60"

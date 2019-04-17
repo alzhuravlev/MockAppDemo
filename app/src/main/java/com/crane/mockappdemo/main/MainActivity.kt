@@ -1,6 +1,9 @@
 package com.crane.mockappdemo.main
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.view.View
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -18,7 +21,7 @@ class MainActivity : MockAppActivity() {
     private lateinit var recyclerView: RecyclerView
 
     @MockAppView
-    private lateinit var appBarLayout: AppBarLayout
+    private lateinit var viewOnGitHubButton: View
 
     private lateinit var mainViewModel: MainViewModel
 
@@ -35,10 +38,23 @@ class MainActivity : MockAppActivity() {
         mainAdapter = MainAdapter(this)
         recyclerView.adapter = mainAdapter
 
+        viewOnGitHubButton.setOnClickListener {
+            viewUrl("https://github.com/alzhuravlev/MockAppDemo")
+        }
+
         mainViewModel.onLoadSamples()
     }
 
     fun updateSamples(samples: List<MainItem>) {
         mainAdapter.update(samples)
     }
+
+    fun viewUrl(url: String) {
+        try {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            startActivity(intent)
+        } catch (e: Exception) {
+        }
+    }
+
 }
