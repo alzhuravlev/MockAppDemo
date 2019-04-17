@@ -16,7 +16,7 @@ android {
         applicationId "com.crane.mockappdemo"
         minSdkVersion 22
         targetSdkVersion 28
-        versionCode 1
+        versionCode vCode as Integer
         versionName "1.0"
     }
     signingConfigs {
