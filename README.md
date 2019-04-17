@@ -150,6 +150,58 @@ Inflating a layout in general case include 3 steps:
 3. Bind views from inflated layout (see Binding Views for more details)
 
 ## Inflate RecyclerView's items
+
+### [RecyclerView5.kt](app/src/main/java/com/crane/mockappdemo/sample1/RecyclerView5.kt)
+
+There is utility method for creating RecyclerView's ViewHolder objects and bind view for it.
+
+Declare your ViewHolder subclass somethong like this
+
+```kotlin
+    @MockAppLayout(projectName = "icountries", layoutName = "page_news_item")
+    inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
+        @MockAppView
+        lateinit var shortText: TextView
+
+        @MockAppView
+        lateinit var fullText: TextView
+
+        override fun bind(position: Int) {
+            shortText.text = "Some item att position $position"
+            fullText.text = "Cos of position is ${Math.cos(position.toDouble())}"
+        }
+    }
+```
+
+and in onCreateViewHolder use MockApp.createViewHolder to inflate item's layout and bind views
+
+```kotlin
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
+        return MockApp.createViewHolder(context, this, MyViewHolder::class.java, parent)
+    }
+```
+
+Sometimes we need to know the point where all views are binded. Implement `MockAppViewBinder` interface in the ViewHolder 
+and override `onViewsReady` to set event handlers for instance
+
+```kotlin
+@MockAppLayout(projectName = "icountries", layoutName = "page_fav_item")
+    inner class MyViewHolder1(itemView: View) : MyViewHolder(itemView), MockAppViewBinder {
+
+        @MockAppView
+        lateinit var titleText: TextView
+
+        @MockAppView
+        lateinit var subtitleText: TextView
+
+        override fun onViewsReady() {
+            subtitleText.setOnClickListener {
+                Toast.makeText(context, "What do you want?", Toast.LENGTH_LONG)
+            }
+        }
+```
+
 ## Binding Views
 
 # Developed by
