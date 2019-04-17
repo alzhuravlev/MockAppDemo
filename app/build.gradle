@@ -27,6 +27,7 @@ android {
             keyPassword "111111"
         }
     }
+    
     buildTypes {
         release {
             minifyEnabled false
