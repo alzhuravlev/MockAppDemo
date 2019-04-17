@@ -136,12 +136,21 @@ If layout could not be inflated for any reason you have a chance to take care of
 
 ### [Fragment3.kt](app/src/main/java/com/crane/mockappdemo/sample1/Fragment3.kt)
 
-Just like extending MockAppActivity you have options to use
-@MockAppLayout or override getProjectId/getProjectName and getLayoutId/getLayoutName
+Just like extending MockAppActivity you have two options:
+* use @MockAppLayout 
+* or override getProjectId/getProjectName and getLayoutId/getLayoutName
 
 ## Inflate layout in general
+
+### [GeneralCase4.kt](app/src/main/java/com/crane/mockappdemo/sample1/GeneralCase4.kt)
+
+Inflating a layout in general case include 3 steps:
+1. Load LayoutDescriptor from \*.json file located somewhere (or just a string)
+2. Inflate a layout to get a View using variation of LayoutInflater.inflate...
+3. Bind views from inflated layout (see Binding Views for more details)
+
 ## Inflate RecyclerView's items
-## Binding views
+## Binding Views
 
 # Developed by
 Alexey Zhuravlev ([crane2002@gmail.com](mailto:crane2002@gmail.com))
