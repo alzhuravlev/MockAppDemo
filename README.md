@@ -8,7 +8,7 @@ This is a demo of the MockApp library used to inflate layouts created with
 Traditionaly UI prototypes are created using great tools like zeplin, figma etc. Developer takes that assets and trying
 to recreate UI using Android layout XML. If something changed cycle has to be repeated. So we have two bunches of assets: produced by designing tool and Androdi XML that needs to be in keep sync. As we all know that the shorter the dev cycle the better.
 
-So why we couldn't experimenting with UI right in Android UI terms (Views)? Wnen design assets become real app assets, not just a nice pictures.
+So why we couldn't experimenting with UI right in Android UI terms (Views)? When design assets become a real app assets, not just a nice pictures!
 
 The challenge of this tool is to have one bunch of assets for design and production code.
 
