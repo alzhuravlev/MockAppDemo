@@ -1,7 +1,9 @@
+![MockAppDemo](MockAppDemo.gif)
+
 # MockApp Demo
 
 This is a demo of the MockApp library used to inflate layouts created with 
-[MockApp application](https://play.google.com/store/apps/details?id=com.crane.mockapp)
+[MockApp](https://play.google.com/store/apps/details?id=com.crane.mockapp) application
 
 # Motivation
 
