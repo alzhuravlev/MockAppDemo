@@ -2,6 +2,7 @@ package com.crane.mockappdemo.main
 
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
@@ -20,6 +21,10 @@ class MainAdapter(
 
         @MockAppView
         lateinit var name: TextView
+
+        @MockAppView
+        lateinit var viewSource: View
+
         @MockAppView
         lateinit var description: TextView
 
@@ -30,6 +35,17 @@ class MainAdapter(
                     return@setOnClickListener
                 val item = items[pos]
                 context.startActivity(Intent(context, item.activity))
+            }
+
+            viewSource.setOnClickListener {
+                val pos = adapterPosition
+                if (pos == RecyclerView.NO_POSITION)
+                    return@setOnClickListener
+                val item = items[pos]
+                val url =
+                    "https://github.com/alzhuravlev/MockAppDemo/blob/master/app/src/main/java/com/crane/mockappdemo/sample1/${item.activity.simpleName}.kt"
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+                context.startActivity(intent)
             }
         }
 
