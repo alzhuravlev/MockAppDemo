@@ -1,4 +1,4 @@
-![MockAppDemo](MockAppDemo.gif)
+[ ![MockAppDemo](MockAppDemo.gif) ](https://play.google.com/store/apps/details?id=com.crane.mockappdemo)
 
 # MockApp Demo
 
