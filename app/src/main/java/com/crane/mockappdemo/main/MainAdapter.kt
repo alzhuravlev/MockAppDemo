@@ -23,10 +23,10 @@ class MainAdapter(
         lateinit var name: TextView
 
         @MockAppView
-        lateinit var viewSource: View
+        lateinit var description: TextView
 
         @MockAppView
-        lateinit var description: TextView
+        lateinit var viewSource: View
 
         override fun onViewsReady() {
             itemView.setOnClickListener {
