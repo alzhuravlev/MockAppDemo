@@ -61,9 +61,9 @@ dependencies {
 
     implementation "androidx.lifecycle:lifecycle-extensions:2.0.0"
 
-    implementation 'com.crane:mockappcore:1.40.7'
+    implementation 'com.crane:mockappcore:1.40.8'
 
     // optional: for auto build *.tags.txt file from views
     // annotated with @MockAppLayout and @MockAppView
-    kapt 'com.crane:mockappprocessor:1.40.7'
+    kapt 'com.crane:mockappprocessor:1.40.8'
 }
