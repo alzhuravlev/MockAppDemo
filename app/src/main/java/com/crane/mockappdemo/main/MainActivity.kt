@@ -11,6 +11,7 @@ import com.crane.mockapp.annotations.MockAppLayout
 import com.crane.mockapp.annotations.MockAppView
 import com.crane.mockapp.core.MockAppActivity
 import android.content.pm.PackageManager
+import androidx.core.content.ContextCompat.startActivity
 
 
 @MockAppLayout(projectName = "mockappdemo", layoutName = "main")
