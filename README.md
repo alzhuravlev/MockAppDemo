@@ -41,7 +41,7 @@ Some design technics are highlited here [MockApp. Design Time](https://medium.co
 # Code time
 
 ## Dependencies
-[ ![Download](https://api.bintray.com/packages/crane2002/maven/mockapp-core/images/download.svg?_latestVersion) ](https://bintray.com/crane2002/maven/mockapp-core/_latestVersion/link)
+[ ![Download](https://api.bintray.com/packages/crane2002/maven/mockapp-core/images/download.svg?_latestVersion) ](https://bintray.com/crane2002/maven/mockapp-core/_latestVersion)
 
 Add dependencies
 ```gradle
