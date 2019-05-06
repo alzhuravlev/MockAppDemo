@@ -18,7 +18,7 @@ The challenge of this tool is to have one bunch of assets for design and product
 
 General steps are:
 1. Design initial UI, quick sending results to the stakeholders as APK generated right from the [MockApp application](https://play.google.com/store/apps/details?id=com.crane.mockapp)
-2. Use excactly the same UI in real Android Studio project. Using [ MockApp Library ![MockApp Library](https://api.bintray.com/packages/crane2002/maven/mockapp-core/images/download.svg?_latestVersion) ](https://bintray.com/crane2002/maven/mockapp-core/_latestVersion/link) to **inflate layouts** and **bind views**
+2. Use excactly the same UI in real Android Studio project. Using [ MockaApp Library ![Download](https://api.bintray.com/packages/crane2002/maven/mockapp-core/images/download.svg?_latestVersion) ](https://bintray.com/crane2002/maven/mockapp-core/_latestVersion) to **inflate layouts** and **bind views**
 3. Make changes to the UI and see results immediately in your app
 
 # Design time
