@@ -64,10 +64,10 @@ dependencies {
     implementation 'com.google.android.material:material:1.0.0'
 
 
-    implementation 'com.crane:mockappcore:1.40.9'
-    implementation 'com.crane:mockappannotations:1.40.9'
+    implementation 'com.crane:mockappcore:1.40.10'
+    implementation 'com.crane:mockappannotations:1.40.10'
 
     // optional: for auto build *.tags.txt file from views
     // annotated with @MockAppLayout and @MockAppView
-    kapt 'com.crane:mockappprocessor:1.40.9'
+    kapt 'com.crane:mockappprocessor:1.40.10'
 }
