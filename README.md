@@ -36,7 +36,7 @@ General steps are:
 11. Status bar coloring
 12. And more...
 
-Some design technics are highlited here [MockApp. Design Time](https://medium.com/mock-app/mockapp-design-time-1aeecbcaf858)
+Some design technics are highlited here [MockApp on Medium](https://medium.com/mock-app)
 
 # Code time
 
