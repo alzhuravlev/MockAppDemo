@@ -58,7 +58,12 @@ class MainAdapter(
     private val items = mutableListOf<MainItem>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return MockApp.createViewHolder(context, this, ViewHolder::class.java, parent)
+        return MockApp.createViewHolder(
+            context,
+            this,
+            ViewHolder::class.java,
+            parent
+        )
     }
 
     override fun getItemCount(): Int = items.size

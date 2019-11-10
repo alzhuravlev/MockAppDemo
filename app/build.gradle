@@ -17,7 +17,7 @@ android {
         minSdkVersion 22
         targetSdkVersion 28
         versionCode vCode as Integer
-        versionName "1.40.10"
+        versionName "1.40.11"
     }
     signingConfigs {
         release {
@@ -56,18 +56,18 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.0'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.1'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.1.0'
 
-    implementation "androidx.lifecycle:lifecycle-extensions:2.0.0"
-    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation "androidx.lifecycle:lifecycle-extensions:2.1.0"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'com.google.android.material:material:1.0.0'
 
 
-    implementation 'com.crane:mockappcore:1.40.10'
-    implementation 'com.crane:mockappannotations:1.40.10'
+    implementation 'com.crane:mockappcore:1.40.11'
+    implementation 'com.crane:mockappannotations:1.40.11'
 
     // optional: for auto build *.tags.txt file from views
     // annotated with @MockAppLayout and @MockAppView
-    kapt 'com.crane:mockappprocessor:1.40.10'
+    kapt 'com.crane:mockappprocessor:1.40.11'
 }

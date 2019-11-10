@@ -28,14 +28,14 @@ class RecyclerView5 : MockAppActivity() {
 
 class MyAdapter(
     val context: Context
-) : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
+) : RecyclerView.Adapter<MyAdapter.ViewHolder>() {
 
-    abstract inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    abstract inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         abstract fun bind(position: Int)
     }
 
     @MockAppLayout(projectName = "icountries", layoutName = "page_fav_item")
-    inner class MyViewHolder1(itemView: View) : MyViewHolder(itemView), MockAppViewBinder {
+    inner class ViewHolder1(itemView: View) : ViewHolder(itemView), MockAppViewBinder {
 
         @MockAppView
         lateinit var titleText: TextView
@@ -56,7 +56,7 @@ class MyAdapter(
     }
 
     @MockAppLayout(projectName = "icountries", layoutName = "page_news_item")
-    inner class MyViewHolder2(itemView: View) : MyViewHolder(itemView) {
+    inner class ViewHolder2(itemView: View) : ViewHolder(itemView) {
 
         @MockAppView
         lateinit var shortText: TextView
@@ -77,10 +77,20 @@ class MyAdapter(
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return when (viewType) {
-            0 -> MockApp.createViewHolder(context, this, MyViewHolder1::class.java, parent)
-            else -> MockApp.createViewHolder(context, this, MyViewHolder2::class.java, parent)
+            0 -> MockApp.createViewHolder(
+                context,
+                this,
+                ViewHolder1::class.java,
+                parent
+            )
+            else -> MockApp.createViewHolder(
+                context,
+                this,
+                ViewHolder2::class.java,
+                parent
+            )
         }
     }
 
@@ -88,7 +98,7 @@ class MyAdapter(
         return 30
     }
 
-    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(position)
     }
 }
