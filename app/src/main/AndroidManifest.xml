@@ -21,8 +21,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.crane.mockapp.core.MockAppActivity"/>
-
         <activity android:name=".sample1.Activity1"/>
         <activity android:name=".sample1.Activity2"/>
         <activity android:name=".sample1.Fragment3"/>
