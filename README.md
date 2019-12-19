@@ -64,15 +64,27 @@ You can get very fast dev cycle if you inflate layouts from internal storage. Bu
 You can change local ptoject path in this way:
 
 ```kotlin
-class MyApplication : Application() {
+class Application : Application() {
     override fun onCreate() {
         super.onCreate()
 
-        // Optionally you can override location of the local project's storage.
-        // Default is /sdcard/Documents/MockApp
-        val path =
-            File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), "MyMockAppFolder").path
-        ProjectServiceFactory.init(this, path)
+        // this allows to inflate layouts from assets folder of your application
+        // just copy folder of your project under /assets/MockApp/
+        val assetsProjectSource = AssetsProjectSource(this)
+
+        val localProjectSource = LocalProjectSource(
+            this,
+            // Optionally you can override location of the local project's storage.
+            // Default is /sdcard/Documents/MockApp
+            File(
+                Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS),
+                "MockAppDemo"
+            )
+        )
+
+        // Initialize several sources. Order is matter. Projects will be
+        // searched among all sources in order you pass it into init method
+        ProjectSource.init(localProjectSource, assetsProjectSource)
     }
 }
 ```
