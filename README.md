@@ -46,11 +46,12 @@ Some design technics are highlited here [MockApp on Medium](https://medium.com/m
 Add dependencies
 ```gradle
     // required
-    implementation 'com.crane:mockappcore:1.40.5'
+    implementation 'com.crane:mockappcore:2.0.0'
+    implementation 'com.crane:mockappannotations:2.0.0'
 
     // optional: for auto build *.tags.txt file from classes
     // annotated with @MockAppLayout and @MockAppView
-    kapt 'com.crane:mockappprocessor:1.40.5'
+    kapt 'com.crane:mockappprocessor:2.0.0'
 ```
 
 ## Initialization
