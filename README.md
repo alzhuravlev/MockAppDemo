@@ -232,40 +232,49 @@ If file `<layout_name>.tags.txt` exists than list of custom tags from this file 
 
 ```gradle
 
-def copyToAssets() {
-    copy {
-        from 'build/generated/source/kapt/debug/main/assets/MockApp'
-        into "src/main/assets/MockApp"
+task copyToAssets() {
+    group = 'mockapp'
+    description = 'Copying *.tags.txt into asset\'s MockApp folder and into current USB Device'
+    doLast {
+        copy {
+            from 'build/generated/source/kapt/debug/main/assets/MockApp'
+            into "src/main/assets/MockApp"
+        }
+        def tmp = File.createTempDir()
+        copy {
+            from('build/generated/source/kapt/debug/main/assets/MockApp') {
+                include '**/*.tags.txt'
+            }
+            into tmp.path
+        }
+        exec {
+            workingDir tmp.path
+            ignoreExitValue true
+            commandLine 'cmd', '/c', 'adb', 'push', '.', '/sdcard/Documents/MockApp'
+        }
+        tmp.delete()
+        println 'copyToAssets done.'
     }
 }
 
 afterEvaluate { project ->
-    project.tasks.compileDebugSources {
-        doLast {
-            copyToAssets()
-        }
-    }
+    project.tasks.compileDebugSources.finalizedBy(copyToAssets)
 }
 
 dependencies {
-
 ...
-
-implementation 'com.crane:mockappcore:1.40.5'
-**kapt 'com.crane:mockappprocessor:1.40.5'**
-
+implementation 'com.crane:mockappcore:2.0.0'
+kapt 'com.crane:mockappprocessor:2.0.0'
 ...
-
 }
 ```
 
-And after build \*.tags.txt files will be copied into `src/main/assets/MockApp` folder
+And after build \*.tags.txt files will be copied into `src/main/assets/MockApp` folder and /sdcard/Documents/MockApp/ folder on connected devices
 
 Hint. To make dev cycle easier you can copy all you layout from/to your device
 
 Copy to device
 ```bash
-adb shell rm -rf /sdcard/Documents/MockApp
 adb push app/src/main/assets/MockApp /sdcard/Documents
 ```
 
@@ -273,7 +282,6 @@ After you modify layouts pull it back into `assets` folder using
 
 ```bash
 adb pull /sdcard/Documents/MockApp app/src/main/assets
-rmdir /S /Q app\src\main\assets\MockApp\tmp
 ```
 
 Run these commands from the root of your Android Studio project.
